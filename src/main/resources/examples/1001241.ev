@@ -1,0 +1,1 @@
+let errmsg = nil;if(KA != nil && HA == nil ){   errmsg = "KA与HA同时存在";   return errmsg;}return true;
