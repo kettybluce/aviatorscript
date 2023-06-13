@@ -1,1 +1,0 @@
-let errmsg = nil;if(KA != nil && FA == nil){   errmsg = "FC必须与E同时存在";   return errmsg;}return true;
