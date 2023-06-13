@@ -79,4 +79,20 @@ public class ModelSpec {
      */
     @ApiModelProperty(value = "筛选以及可选型属性的集合")
     private List<ModelSpecValue> specValueList;
+
+    public List<ModelRangeSpecValue> getSpecRangeList() {
+        return specRangeList;
+    }
+
+    public void setSpecRangeList(List<ModelRangeSpecValue> specRangeList) {
+        this.specRangeList = specRangeList;
+    }
+
+    public List<ModelSpecValue> getSpecValueList() {
+        return specValueList;
+    }
+
+    public void setSpecValueList(List<ModelSpecValue> specValueList) {
+        this.specValueList = specValueList;
+    }
 }
