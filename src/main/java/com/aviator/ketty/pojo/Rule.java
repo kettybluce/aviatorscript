@@ -39,4 +39,7 @@ public class Rule {
 
     @ApiModelProperty(value = "更新人")
     private String updateBy;
+
+    @ApiModelProperty(value = "备注")
+    private String remark;
 }

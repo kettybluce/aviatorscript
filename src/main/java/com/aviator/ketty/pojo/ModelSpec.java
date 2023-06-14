@@ -72,13 +72,13 @@ public class ModelSpec {
      * 输入型属性的集合
      */
     @ApiModelProperty(value = "输入型属性的集合")
-    private List<ModelRangeSpecValue> specRangeList;
+    public List<ModelRangeSpecValue> specRangeList;
 
     /**
      * 筛选以及可选型属性的集合
      */
     @ApiModelProperty(value = "筛选以及可选型属性的集合")
-    private List<ModelSpecValue> specValueList;
+    public List<ModelSpecValue> specValueList;
 
     public List<ModelRangeSpecValue> getSpecRangeList() {
         return specRangeList;
