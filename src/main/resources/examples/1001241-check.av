@@ -1,1 +1,1 @@
-let errmsg = nil;if ((WD != nil && GD != nil && AC != nil) || (WD == nil && GD == nil && AC == nil)) {    return true;} else {   errmsg = "WD 必须与 GD 与 AC 同时存在";   return errmsg;}
+

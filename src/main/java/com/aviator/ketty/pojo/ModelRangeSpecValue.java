@@ -2,8 +2,7 @@ package com.aviator.ketty.pojo;
 
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
-import lombok.Getter;
-import lombok.Setter;
+import lombok.Data;
 
 import java.math.BigDecimal;
 import java.util.Objects;
@@ -11,8 +10,7 @@ import java.util.Objects;
 /***
  * 型号属性值范围信息
  */
-@Getter
-@Setter
+@Data
 @ApiModel(value = "ModelRangeSpecValue对象", description = "型号属性值范围信息")
 public class ModelRangeSpecValue {
 

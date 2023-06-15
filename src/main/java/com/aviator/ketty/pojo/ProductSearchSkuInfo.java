@@ -2,16 +2,14 @@ package com.aviator.ketty.pojo;
 
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
-import lombok.Getter;
-import lombok.Setter;
+import lombok.Data;
 
 import java.util.List;
 
 /**
  * 产品型号信息
  */
-@Getter
-@Setter
+@Data
 @ApiModel(value = "ProductSearchSkuInfo对象", description = "产品型号信息")
 public class ProductSearchSkuInfo {
 

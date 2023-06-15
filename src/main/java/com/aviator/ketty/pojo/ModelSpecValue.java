@@ -2,16 +2,14 @@ package com.aviator.ketty.pojo;
 
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
-import lombok.Getter;
-import lombok.Setter;
+import lombok.Data;
 
 import java.util.Objects;
 
 /***
  * 型号属性值信息
  */
-@Getter
-@Setter
+@Data
 @ApiModel(value = "ModelSpecValue对象", description = "筛选以及可选型属性的集合")
 public class ModelSpecValue {
 

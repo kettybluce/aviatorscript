@@ -1,1 +1,1 @@
-let p = productSearchSkuInfo;return p;
+let p = productSearchSkuInfo;let scMax = nil;let lMin = nil;return p;
