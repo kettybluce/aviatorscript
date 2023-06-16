@@ -1,0 +1,1 @@
+package com.aviator.ketty.pojo;import lombok.Data;/** * @Author ketty bluce * @Create 2023/6/16 * @Version 1.0 */@Datapublic class Aviator {    private Integer id;    private String aviator;}

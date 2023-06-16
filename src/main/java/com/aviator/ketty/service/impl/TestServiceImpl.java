@@ -1,22 +1,20 @@
 package com.aviator.ketty.service.impl;
 
 
+import cn.hutool.db.Db;
+import cn.hutool.db.Entity;
 import com.aviator.ketty.core.JsonResult;
 import com.aviator.ketty.rule.AbstractAviatorRule;
 import com.aviator.ketty.rule.AviatorResult;
 import com.aviator.ketty.rule.DefaultRuleChain;
 import com.aviator.ketty.rule.RuleChain;
 import com.aviator.ketty.service.TestService;
-import com.aviator.ketty.utils.FileUtils;
 import com.aviator.ketty.verify.VerificationTest;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
-import org.springframework.util.ObjectUtils;
 
-import javax.script.ScriptException;
 import java.io.IOException;
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
@@ -35,18 +33,16 @@ public class TestServiceImpl implements TestService {
     @Override
     public JsonResult getParamTest(Map<String, Object> paramMap) {
         try {
-            if (ObjectUtils.isEmpty(paramMap) || ObjectUtils.isEmpty(paramMap.get("path"))) {
-                throw new ScriptException("参数为空或者脚本路径为空");
-            }
-            // 表达式   Ambitious goals
-            String expression = FileUtils.loadResourceFileAsString("/examples/1001241-test.av");
+
+            List<Entity> user = Db.use().findAll("aviator");
+            String expression = (String) user.get(0).get("aviator");
 
             List<AbstractAviatorRule> calRuleList = VerificationTest.buildCalRules(1L, expression);
             RuleChain ruleChain = new DefaultRuleChain(calRuleList);
 
             // 执行计算脚本逻辑
             List<AbstractAviatorRule> response = new ArrayList<>();
-            ruleChain.matchRule(new HashMap<>(), response);
+            ruleChain.matchRule(paramMap, response);
             AbstractAviatorRule abstractAviatorRule = response.get(0);
             AviatorResult result = abstractAviatorRule.getResult();
 

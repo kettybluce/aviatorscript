@@ -13,7 +13,6 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2WebMvc;
 
 @Configuration
 @EnableSwagger2WebMvc
-//@EnableSwagger2
 public class SwaggerConfiguration {
     @Bean(value = "defaultApi2")
     public Docket defaultApi2() {
@@ -24,7 +23,7 @@ public class SwaggerConfiguration {
                 .groupName("1.X版本")
                 .select()
                 //这里指定Controller扫描包路径
-                .apis(RequestHandlerSelectors.basePackage("com.example"))
+                .apis(RequestHandlerSelectors.basePackage("com.aviator.ketty"))
                 .paths(PathSelectors.any())
                 .build();
         return docket;

@@ -36,8 +36,8 @@ public class SwaggerConfig {
 
 
         return new Docket(DocumentationType.SWAGGER_2)
-            .select()
-            .apis(RequestHandlerSelectors.any())
+                .select()
+                .apis(RequestHandlerSelectors.basePackage("com.aviator.ketty"))
             .paths(PathSelectors.regex("/*/api/*"))
             .build()
             .globalOperationParameters(pars)
