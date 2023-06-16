@@ -1,1 +1,1 @@
-
+let errmsg = nil; let l1=0;if(UC ==nil || D ==nil || L==nil ) {return true;}fn getParam(D){let l1=0;if(D>=6 && D<=10){  l1=8; } elsif(D>=12 && D<=25){    l1=10;  } elsif(D>=30 && D<=35){    l1=15;  } elsif(D>=40 && D<=50){    l1=20; }return l1;};let d=long(double(D));l1=getParam(d);if( d==1.25 || d>=13){return true;}  if(UC+l1<=L && UC>=1) {      return true;  } else {   errmsg = "必须满足 UC+l1≤L  并且 UC>=1";   return errmsg;}

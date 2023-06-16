@@ -169,11 +169,9 @@ return true;
 
 let errmsg = nil;
 if(LA != nil && LB != nil && L != nil ){
-	LA=long(LA);
-	LB=long(LB);
-	L=long(L);
+    LA=LA+LB;
 	L=L/2;
-	if(L>=LA+LB){
+	if(L>=LA){
              return true;
           }else{
              errmsg = "需满足公式 LA + LB ≤ L÷2";
