@@ -1,1 +1,0 @@
-package com.aviator.ketty.test;import lombok.Data;/** * @Author ketty bluce * @Create 2023/5/25 * @Version 1.0 */@Datapublic class User{    public String name;    public String score;}

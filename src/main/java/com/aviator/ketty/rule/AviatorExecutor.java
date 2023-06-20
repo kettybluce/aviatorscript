@@ -13,7 +13,7 @@ public class AviatorExecutor {
 
         // 创建解释器
 //        AviatorEvaluatorInstance engine = AviatorEvaluator.newInstance(EvalMode.INTERPRETER);
-        // 打开跟踪执行
+//        // 打开跟踪执行
 //        engine.setOption(Options.TRACE_EVAL, true);
 
 //        Map<String, Object> param = AviatorContext.buildMap(context);
