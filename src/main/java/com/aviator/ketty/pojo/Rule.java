@@ -1,5 +1,6 @@
 package com.aviator.ketty.pojo;
 
+import com.baomidou.mybatisplus.annotation.TableName;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
@@ -8,6 +9,7 @@ import java.util.Date;
 
 @Data
 @ApiModel(value = "Rule对象", description = "规则对象")
+@TableName(value = "goods_rule")
 public class Rule {
 
     @ApiModelProperty(value = "规则Id")

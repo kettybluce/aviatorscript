@@ -1,0 +1,1 @@
+package com.aviator.ketty.mapper;import com.aviator.ketty.pojo.Rule;import com.baomidou.mybatisplus.core.mapper.BaseMapper;import org.apache.ibatis.annotations.Mapper;/** * @Author ketty bluce * @Create 2023/6/20 * @Version 1.0 */@Mapperpublic interface RuleMapper extends BaseMapper<Rule> {}

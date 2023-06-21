@@ -1,18 +1,20 @@
 package com.aviator.ketty.service.impl;
 
 
-import cn.hutool.db.Db;
-import cn.hutool.db.Entity;
 import com.aviator.ketty.core.JsonResult;
+import com.aviator.ketty.pojo.Rule;
 import com.aviator.ketty.rule.AbstractAviatorRule;
 import com.aviator.ketty.rule.AviatorResult;
 import com.aviator.ketty.rule.DefaultRuleChain;
 import com.aviator.ketty.rule.RuleChain;
+import com.aviator.ketty.service.RuleService;
 import com.aviator.ketty.service.TestService;
 import com.aviator.ketty.verify.VerificationTest;
+import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 
+import javax.annotation.Resource;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
@@ -23,9 +25,10 @@ import java.util.Map;
 public class TestServiceImpl implements TestService {
 
 
+    @Resource
+    private RuleService ruleService;
+
     /**
-     * 测试service 具体请自己添加  传入 paramMap 的模板是  {"name":"我是zbdx355"}
-     *
      * @param paramMap 脚本需要参数
      * @return
      * @throws IOException
@@ -33,11 +36,13 @@ public class TestServiceImpl implements TestService {
     @Override
     public JsonResult getParamTest(Map<String, Object> paramMap) {
         try {
+            QueryWrapper<Rule> ruleQueryWrapper = new QueryWrapper<>();
 
-            List<Entity> user = Db.use().findAll("aviator");
-            String expression = (String) user.get(0).get("aviator");
+            ruleQueryWrapper.eq("spu", paramMap.get("spu")).eq("rule_type", 10).last("limit 1");
 
-            List<AbstractAviatorRule> calRuleList = VerificationTest.buildCalRules(1L, expression);
+            Rule rule = ruleService.getOne(ruleQueryWrapper);
+
+            List<AbstractAviatorRule> calRuleList = VerificationTest.buildCalRules(rule.getRuleId(), rule.getExpression());
             RuleChain ruleChain = new DefaultRuleChain(calRuleList);
 
             // 执行计算脚本逻辑
