@@ -1,1 +1,1 @@
-##脚本一：KA与HA同时存在let errmsg = nil;let A=10;println(type(A));return true;
+let LA=100M;if(LA>=0M && 200>=LA){println("比较成功");}if(0M>=LA){println("二次比较成功");}return true;

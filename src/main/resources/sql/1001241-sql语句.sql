@@ -1,63 +1,56 @@
-DELETE FROM `goods_rule` WHERE spu='1001241' AND rule_type='20';INSERT INTO goods_rule (rule_id,spu, rule_type, expression,`enable`,create_time,remark) VALUES (1671338162092605440,1001241,'20','let errmsg = nil;
-if(KA != nil && HA == nil ){
+DELETE FROM `goods_rule` WHERE spu='1001241' AND rule_type='20';INSERT INTO goods_rule (rule_id,spu, rule_type, expression,`enable`,create_time,remark) VALUES (1673975723000696832,1001241,'20','let errmsg = nil;
+if(KA != nil && HA_1 == nil ){
    errmsg = "KA与HA同时存在";
    return errmsg;
 }
 return true;
 
-','0',now() ,'脚本一：KA与HA同时存在'),(1671338162096799744,1001241,'20','let errmsg = nil;
-if(KB != nil && HB == nil ){
+','0',now() ,'脚本一：KA与HA_1同时存在'),(1673975723000696833,1001241,'20','let errmsg = nil;
+if(KB != nil && HB_1 == nil ){
    errmsg = "KB与HB同时存在";
    return errmsg;
 }
 return true;
 
-','0',now() ,'脚本二：KB与HB同时存在'),(1671338162096799745,1001241,'20','let errmsg = nil;
-if(KC != nil && HC == nil ){
+','0',now() ,'脚本二：KB与HB_1同时存在'),(1673975723000696834,1001241,'20','let errmsg = nil;
+if(KC != nil && HC_1 == nil ){
    errmsg = "KC与HC同时存在";
    return errmsg;
 }
 return true;
 
-','0',now() ,'脚本三：KC与HC同时存在'),(1671338162096799746,1001241,'20','let errmsg = nil;
-if(KD != nil && HD == nil ){
+','0',now() ,'脚本三：KC与HC_1同时存在'),(1673975723000696835,1001241,'20','let errmsg = nil;
+if(KD != nil && HD_1 == nil ){
    errmsg = "KD与HD同时存在";
    return errmsg;
 }
 return true;
 
-','0',now() ,'脚本四：KD与HD同时存在'),(1671338162096799747,1001241,'20','let errmsg = nil;
-if(ZA != nil && HA == nil ){
-   errmsg = "ZA与HA同时存在";
-   return errmsg;
-}
-return true;
-
-','0',now() ,'脚本五：ZA与HA同时存在'),(1671338162096799748,1001241,'20','let errmsg = nil;
-if ((ZA != nil && HA != nil && AA != nil) || (ZA == nil && HA == nil && AA == nil)) {
+','0',now() ,'脚本四：KD与HD同时存在'),(1673975723000696836,1001241,'20','let errmsg = nil;
+if ((ZA != nil && HA != nil && AA_1 != nil) || (ZA == nil && HA == nil && AA_1 == nil)) {
     return true;
 } else {
    errmsg = "ZA 必须与 HA 与 AA 同时存在";
    return errmsg;
 }
 
-','0',now() ,'脚本六：ZA 必须与 HA 与 AA 同时存在'),(1671338162096799749,1001241,'20','let errmsg = nil;
-if ((ZB != nil && HB != nil && AB != nil) || (ZB == nil && HB == nil && AB == nil)) {
+','0',now() ,'脚本六：ZA 必须与 HA 与 AA_1 同时存在'),(1673975723000696837,1001241,'20','let errmsg = nil;
+if ((ZB != nil && HB != nil && AB_1 != nil) || (ZB == nil && HB == nil && AB_1 == nil)) {
     return true;
 } else {
    errmsg = "ZB 必须与 HB 与 AB 同时存在";
    return errmsg;
 }
 
-','0',now() ,'脚本七：ZB 必须与 HB 与 AB 同时存在'),(1671338162096799750,1001241,'20','let errmsg = nil;
-if ((ZC != nil && HC != nil && AC != nil) || (ZC == nil && HC == nil && AC == nil)) {
+','0',now() ,'脚本七：ZB 必须与 HB 与 AB 同时存在'),(1673975723000696838,1001241,'20','let errmsg = nil;
+if ((ZC != nil && HC != nil && AC_1 != nil) || (ZC == nil && HC == nil && AC_1 == nil)) {
     return true;
 } else {
    errmsg = "ZC 必须与 HC 与 AC 同时存在";
    return errmsg;
 }
 
-','0',now() ,'脚本八：ZC 必须与 HC 与 AC 同时存在'),(1671338162096799751,1001241,'20','let errmsg = nil;
+','0',now() ,'脚本八：ZC 必须与 HC 与 AC 同时存在'),(1673975723000696839,1001241,'20','let errmsg = nil;
 if ((ZD != nil && HD != nil && AD != nil) || (ZD == nil && HD == nil && AD == nil)) {
     return true;
 } else {
@@ -65,7 +58,7 @@ if ((ZD != nil && HD != nil && AD != nil) || (ZD == nil && HD == nil && AD == ni
    return errmsg;
 }
 
-','0',now() ,'脚本九：ZD 必须与 HD 与 AD 同时存在'),(1671338162096799752,1001241,'20','let errmsg = nil;
+','0',now() ,'脚本九：ZD 必须与 HD 与 AD 同时存在'),(1673975723000696840,1001241,'20','let errmsg = nil;
 if ((WA != nil && GA != nil && AA != nil) || (WA == nil && GA == nil && AA == nil)) {
     return true;
 } else {
@@ -73,7 +66,7 @@ if ((WA != nil && GA != nil && AA != nil) || (WA == nil && GA == nil && AA == ni
    return errmsg;
 }
 
-','0',now() ,'脚本十：WA 必须与 GA 与 AA 同时存在'),(1671338162096799753,1001241,'20','let errmsg = nil;
+','0',now() ,'脚本十：WA 必须与 GA 与 AA 同时存在'),(1673975723000696841,1001241,'20','let errmsg = nil;
 if ((WB != nil && GB != nil && AB != nil) || (WB == nil && GB == nil && AB == nil)) {
     return true;
 } else {
@@ -81,7 +74,7 @@ if ((WB != nil && GB != nil && AB != nil) || (WB == nil && GB == nil && AB == ni
    return errmsg;
 }
 
-','0',now() ,'脚本十一：WB 必须与 GB 与 AB 同时存在'),(1671338162096799754,1001241,'20','let errmsg = nil;
+','0',now() ,'脚本十一：WB 必须与 GB 与 AB 同时存在'),(1673975723000696842,1001241,'20','let errmsg = nil;
 if ((WD != nil && GD != nil && AC != nil) || (WD == nil && GD == nil && AC == nil)) {
     return true;
 } else {
@@ -89,21 +82,21 @@ if ((WD != nil && GD != nil && AC != nil) || (WD == nil && GD == nil && AC == ni
    return errmsg;
 }
 
-','0',now() ,'脚本十二：WD 必须与 GD 与 AC 同时存在'),(1671338162096799755,1001241,'20','let errmsg = nil;
+','0',now() ,'脚本十二：WD 必须与 GD 与 AC 同时存在'),(1673975723000696843,1001241,'20','let errmsg = nil;
 if(KC != nil && KD == nil ){
    errmsg = "KC 必须与 KD 同时存在";
    return errmsg;
 }
 return true;
 
-','0',now() ,'脚本十三：KC 必须与 KD 同时存在'),(1671338162096799756,1001241,'20','let errmsg = nil;
+','0',now() ,'脚本十三：KC 必须与 KD 同时存在'),(1673975723000696844,1001241,'20','let errmsg = nil;
 if(ZC != nil && ZD == nil ){
    errmsg = "ZC 必须与 ZD 同时存在";
    return errmsg;
 }
 return true;
 
-','0',now() ,'脚本十四：ZC 必须与 ZD 同时存在'),(1671338162096799757,1001241,'20','let errmsg = nil;
+','0',now() ,'脚本十四：ZC 必须与 ZD 同时存在'),(1673975723004891136,1001241,'20','let errmsg = nil;
 if(L != nil && LA != nil && LB != nil && T != nil){
 	if(L>LA+LB+T){
              return true;
@@ -114,7 +107,7 @@ if(L != nil && LA != nil && LB != nil && T != nil){
 }
 return true;
 
-','0',now() ,'脚本十五：L > LA+LB+T'),(1671338162096799758,1001241,'20','let errmsg = nil;
+','0',now() ,'脚本十五：L > LA+LB+T'),(1673975723004891137,1001241,'20','let errmsg = nil;
 if(LA != nil && LB != nil && L != nil ){
 	LA=long(LA);
 	LB=long(LB);
@@ -129,7 +122,7 @@ if(LA != nil && LB != nil && L != nil ){
 }
 return true;
 
-','0',now() ,'脚本十六：LA+LB≤L÷2'),(1671338162096799759,1001241,'20','let errmsg = nil;
+','0',now() ,'脚本十六：LA+LB≤L÷2'),(1673975723004891138,1001241,'20','let errmsg = nil;
 if(MA != nil && LA != nil){
     LA=LA-2;
     if(LA >= MA){
@@ -141,7 +134,7 @@ if(MA != nil && LA != nil){
 }
 return true;
 
-','0',now() ,'脚本十七：MA≦LA-2'),(1671338162096799760,1001241,'20','let errmsg = nil;
+','0',now() ,'脚本十七：MA≦LA-2'),(1673975723004891139,1001241,'20','let errmsg = nil;
 if(MSA != nil && LA != nil ){
     LA=LA-2;
     if(LA >= MSA){
@@ -153,7 +146,7 @@ if(MSA != nil && LA != nil ){
 }
 return true;
 
-','0',now() ,'脚本十八：MSA ≦ LA-2'),(1671338162096799761,1001241,'20','
+','0',now() ,'脚本十八：MSA ≦ LA-2'),(1673975723004891140,1001241,'20','
 let errmsg = nil;
 if(MMA != nil && LA != nil ){
 	LA=LA-2;
@@ -166,7 +159,7 @@ if(MMA != nil && LA != nil ){
 }
 return true;
 
-','0',now() ,'脚本十九： MMA ≦ LA-2'),(1671338162096799762,1001241,'20','let errmsg = nil;
+','0',now() ,'脚本十九： MMA ≦ LA-2'),(1673975723004891141,1001241,'20','let errmsg = nil;
 if(MB != nil && LA != nil ){
 	LA=LA-2;
 	if(LA >= MB){
@@ -178,7 +171,7 @@ if(MB != nil && LA != nil ){
 }
 return true;
 
-','0',now() ,'脚本二十： MB ≦ LB-2'),(1671338162096799763,1001241,'20','let errmsg = nil;
+','0',now() ,'脚本二十： MB ≦ LB-2'),(1673975723004891142,1001241,'20','let errmsg = nil;
 if(MSB != nil && LA != nil ){
 	LA=LA-2;
 	if(LA >= MSB){
@@ -190,7 +183,7 @@ if(MSB != nil && LA != nil ){
 }
 return true;
 
-','0',now() ,'脚本二十一： MSB ≦ LB-2'),(1671338162100994048,1001241,'20','let errmsg = nil;
+','0',now() ,'脚本二十一： MSB ≦ LB-2'),(1673975723004891143,1001241,'20','let errmsg = nil;
 if(MMB != nil && LA != nil ){
 	LA=LA-2;
 	if(LA >= MMB){
@@ -202,7 +195,7 @@ if(MMB != nil && LA != nil ){
 }
 return true;
 
-','0',now() ,'脚本二十二： MMB ≦ LB-2'),(1671338162100994049,1001241,'20','
+','0',now() ,'脚本二十二： MMB ≦ LB-2'),(1673975723004891144,1001241,'20','
 let errmsg = nil;
 if(MD != nil && D != nil ){
 	D=D*5;
@@ -215,7 +208,7 @@ if(MD != nil && D != nil ){
 }
 return true;
 
-','0',now() ,'脚本二十三：MD ≦ D×5'),(1671338162100994050,1001241,'20','let errmsg = nil;
+','0',now() ,'脚本二十三：MD≦D×5'),(1673975723004891145,1001241,'20','let errmsg = nil;
 if(MD != nil && L != nil  && LA != nil && LB != nil && T != nil){
 	L=L-LA-LB-T-2;
 	if(L >= MD){
@@ -227,7 +220,7 @@ if(MD != nil && L != nil  && LA != nil && LB != nil && T != nil){
 }
 return true;
 
-','0',now() ,'脚本二十四： MD ≦ L-LA-LB-T-2'),(1671338162100994051,1001241,'20','let errmsg = nil;
+','0',now() ,'脚本二十四： MD≦L-LA-LB-T-2'),(1673975723004891146,1001241,'20','let errmsg = nil;
 if(MSD != nil && D != nil ){
 	D=D*5;
 	if(D >= MSD){
@@ -239,7 +232,7 @@ if(MSD != nil && D != nil ){
 }
 return true;
 
-','0',now() ,'脚本二十五：MSD ≦D×5'),(1671338162100994052,1001241,'20','let errmsg = nil;
+','0',now() ,'脚本二十五：MSD≦D×5'),(1673975723004891147,1001241,'20','let errmsg = nil;
 if(MSD != nil && L != nil  && LA != nil && LB != nil && T != nil){
 	L=L-LA-LB-T-2;
 	if( L >= MSD){
@@ -251,7 +244,7 @@ if(MSD != nil && L != nil  && LA != nil && LB != nil && T != nil){
 }
 return true;
 
-','0',now() ,'脚本二十六：MSD ≦L-LA-LB-T-2'),(1671338162100994053,1001241,'20','fn checkMap(D){
+','0',now() ,'脚本二十六：MSD≦L-LA-LB-T-2'),(1673975723004891148,1001241,'20','fn checkMap(D){
     let newMap=seq.map("8",8,"10",10,"12",12,"12A",12,"15",15,"17",17,"17A",17,"20",20,"25",25,"30",30,"35",35,"40",40,"45",45);
     let newData=nil;
     for x in newMap {
@@ -274,7 +267,7 @@ if(MMD != nil && D != nil ){
 }
 return true;
 
-','0',now() ,'脚本二十七：MMD ≦D×5'),(1671338162100994054,1001241,'20','let errmsg = nil;
+','0',now() ,'脚本二十七：MMD≦D×5'),(1673975723004891149,1001241,'20','let errmsg = nil;
 if(MMD != nil && L != nil  && LA != nil && LB != nil && T != nil){
 	L=L-LA-LB-T-2;
 	if(MMD >= 5 && L >= MMD){
@@ -286,7 +279,7 @@ if(MMD != nil && L != nil  && LA != nil && LB != nil && T != nil){
 }
 return true;
 
-','0',now() ,'脚本二十八：MMD ≦L-LA-LB-T-2'),(1671338162100994055,1001241,'20','let errmsg = nil;
+','0',now() ,'脚本二十八：MMD≦L-LA-LB-T-2'),(1673975723009085440,1001241,'20','let errmsg = nil;
 if(NA != nil && P != nil ){
 	P=P-4;
 	if(NA <= P ){
@@ -298,7 +291,7 @@ if(NA != nil && P != nil ){
 }
 return true;
 
-','0',now() ,'脚本二十九：NA ≦ P -4'),(1671338162100994056,1001241,'20','let errmsg = nil;
+','0',now() ,'脚本二十九：NA≦P-4'),(1673975723009085441,1001241,'20','let errmsg = nil;
 if(NB != nil && Q != nil ){
 	Q=Q-4;
 	if(NB <= Q ){
@@ -310,8 +303,8 @@ if(NB != nil && Q != nil ){
 }
 return true;
 
-','0',now() ,'脚本三十：NB ≦ Q - 4'),(1671338162100994057,1001241,'20','let errmsg = nil;
-if(KA != nil && LA != nil && HA != nil){
+','0',now() ,'脚本三十：NB≦Q-4'),(1673975723009085442,1001241,'20','let errmsg = nil;
+if(KA != nil && LA != nil && HA_1 != nil){
 	LA=LA-2-HA;
 	if(KA <= LA ){
              return true;
@@ -322,10 +315,10 @@ if(KA != nil && LA != nil && HA != nil){
 }
 return true;
 
-','0',now() ,'脚本三十一：0≦ KA ≦ LA - HA -2'),(1671338162100994058,1001241,'20','let errmsg = nil;
-if(HA != nil && LA != nil && KA != nil){
+','0',now() ,'脚本三十一：KA≦LA-HA_1-2'),(1673975723009085443,1001241,'20','let errmsg = nil;
+if(HA_1 != nil && LA != nil && KA != nil){
 	LA=LA-2-KA;
-	if(HA <= LA ){
+	if(HA_1 <= LA ){
              return true;
           }else{
              errmsg = "需满足公式 0≦ HA ≦ LA-KA-2 ";
@@ -335,9 +328,9 @@ if(HA != nil && LA != nil && KA != nil){
 return true;
 
 
-','0',now() ,'脚本三十二：0≦ HA ≦ LA-KA-2'),(1671338162100994059,1001241,'20','let errmsg = nil;
-if(KB != nil && LB != nil && HB != nil){
-	LB=LB-HB-2;
+','0',now() ,'脚本三十二：HA_1≦LA-KA-2'),(1673975723009085444,1001241,'20','let errmsg = nil;
+if(KB != nil && LB != nil && HB_1 != nil){
+	LB=LB-HB_1-2;
 	if(KB>=0 && KB <= LB ){
              return true;
           }else{
@@ -347,10 +340,10 @@ if(KB != nil && LB != nil && HB != nil){
 }
 return true;
 
-','0',now() ,'脚本三十三：0 ≦ KB ≦ LB-HB-2'),(1671338162100994060,1001241,'20','let errmsg = nil;
-if(HB != nil && LB != nil && KB != nil){
+','0',now() ,'脚本三十三：KB≦LB-HB_1-2'),(1673975723009085445,1001241,'20','let errmsg = nil;
+if(HB_1 != nil && LB != nil && KB != nil){
 	LB=LB-KB-2;
-	if(HB>=0 && HB <= LB ){
+	if(HB_1>=0 && HB_1 <= LB ){
              return true;
           }else{
              errmsg = "需满足公式 0≦ HB ≦ LB-KB-2 ";
@@ -360,9 +353,9 @@ if(HB != nil && LB != nil && KB != nil){
 return true;
 
 
-','0',now() ,'脚本三十四：0≦ HB ≦ LB-KB-2'),(1671338162100994061,1001241,'20','let errmsg = nil;
-if(KC != nil && L != nil && LA != nil && LB != nil && T != nil && HC != nil){
-    L=L-LA-LB-T-HC-2;
+','0',now() ,'脚本三十四：HB_1≦LB-KB-2'),(1673975723009085446,1001241,'20','let errmsg = nil;
+if(KC != nil && L != nil && LA != nil && LB != nil && T != nil && HC_1 != nil){
+    L=L-LA-LB-T-HC_1-2;
 	if(KC>=0 && KC <= L ){
              return true;
           }else{
@@ -372,10 +365,10 @@ if(KC != nil && L != nil && LA != nil && LB != nil && T != nil && HC != nil){
 }
 return true;
 
-','0',now() ,'脚本三十五：0≦KC≦(L-LA-LB-T)-HC-2'),(1671338162100994062,1001241,'20','let errmsg = nil;
-if(HC != nil && L != nil && LA != nil && LB != nil && T != nil && KC != nil){
+','0',now() ,'脚本三十五：KC≦L-LA-LB-T-HC_1-2'),(1673975723009085447,1001241,'20','let errmsg = nil;
+if(HC_1 != nil && L != nil && LA != nil && LB != nil && T != nil && KC != nil){
     L=L-LA-LB-T-KC-2;
-	if(HC>=0 && HC <= L ){
+	if(HC_1>=0 && HC_1 <= L ){
              return true;
           }else{
              errmsg = "需满足公式 0≦ HC ≦ L-LA-LB-T-KC-2 ";
@@ -384,9 +377,9 @@ if(HC != nil && L != nil && LA != nil && LB != nil && T != nil && KC != nil){
 }
 return true;
 
-','0',now() ,'脚本三十六：0≦ HC ≦ L-LA-LB-T-KC-2'),(1671338162100994063,1001241,'20','let errmsg = nil;
-if(KD != nil  && HC != nil && KC != nil && L != nil && LA != nil && LB != nil && T != nil && HD != nil){
-    KC=HC+2;
+','0',now() ,'脚本三十六：HC_1≦L-LA-LB-T-KC-2'),(1673975723009085448,1001241,'20','let errmsg = nil;
+if(KD != nil  && HC_1 != nil && KC != nil && L != nil && LA != nil && LB != nil && T != nil && HD != nil){
+    KC=HC_1+2;
     L=L-LA-LB-T-HD-2;
 	if(KD>=KC && KD <= L ){
              return true;
@@ -397,10 +390,10 @@ if(KD != nil  && HC != nil && KC != nil && L != nil && LA != nil && LB != nil &&
 }
 return true;
 
-','0',now() ,'脚本三十七：KC+HC+2 ≦ KD ≦ L-LA-LB-T-HD-2'),(1671338162100994064,1001241,'20','let errmsg = nil;
-if(HD != nil && L != nil && LA != nil && LB != nil && T != nil && KD != nil){
+','0',now() ,'脚本三十七：KC+HC_1+2≦KD≦L-LA-LB-T-HD_1-2'),(1673975723009085449,1001241,'20','let errmsg = nil;
+if(HD_1 != nil && L != nil && LA != nil && LB != nil && T != nil && KD != nil){
     L=L-LA-LB-T-KD-2;
-	if(HD>=0 && HD <= L ){
+	if(HD_1>=0 && HD_1 <= L ){
              return true;
           }else{
              errmsg = "需满足公式 0≦ HD ≦L-LA-LB-T-KD-2 ";
@@ -409,7 +402,7 @@ if(HD != nil && L != nil && LA != nil && LB != nil && T != nil && KD != nil){
 }
 return true;
 
-','0',now() ,'脚本三十八：0≦ HD ≦L-LA-LB-T-KD-2'),(1671338162100994065,1001241,'20','let errmsg = nil;
+','0',now() ,'脚本三十八：HD_1≦L-LA-LB-T-KD-2'),(1673975723009085450,1001241,'20','let errmsg = nil;
 if(ZA != nil  && LA != nil && HA != nil ){
     LA=LA-HA-2;
 	if(ZA>=0 && ZA <= LA ){
@@ -423,7 +416,7 @@ return true;
 
 
 
-','0',now() ,'脚本三十九：0≦ ZA ≦ LA-HA-2'),(1671338162100994066,1001241,'20','let errmsg = nil;
+','0',now() ,'脚本三十九：ZA≦LA-HA-2'),(1673975723009085451,1001241,'20','let errmsg = nil;
 if(HA != nil  && LA != nil && ZA != nil ){
     LA=LA-ZA-2;
 	if(HA>=0 && HA <= LA ){
@@ -437,7 +430,7 @@ return true;
 
 
 
-','0',now() ,'脚本四十：0≦ HA ≦ LA-ZA-2'),(1671338162100994067,1001241,'20','let errmsg = nil;
+','0',now() ,'脚本四十：0≦ HA ≦ LA-ZA-2'),(1673975723009085452,1001241,'20','let errmsg = nil;
 if(ZB != nil  &&  LB != nil &&  HB != nil ){
     LB=LB-HB-2;
     if(ZB>=0 && ZB <= LB ){
@@ -449,7 +442,7 @@ if(ZB != nil  &&  LB != nil &&  HB != nil ){
 }
 return true;
 
-','0',now() ,'脚本四十一：0 ≦ ZB ≦ LB-HB-2'),(1671338162105188352,1001241,'20','let errmsg = nil;
+','0',now() ,'脚本四十一：0 ≦ ZB ≦ LB-HB-2'),(1673975723009085453,1001241,'20','let errmsg = nil;
 if(HB != nil  &&  LB != nil &&  ZB != nil ){
     LB=LB-ZB-2;
     if(HB>=0 && HB <= LB ){
@@ -461,7 +454,7 @@ if(HB != nil  &&  LB != nil &&  ZB != nil ){
 }
 return true;
 
-','0',now() ,'脚本四十二：0 ≦ HB ≦LB-ZB-2'),(1671338162105188353,1001241,'20','
+','0',now() ,'脚本四十二：0 ≦ HB ≦LB-ZB-2'),(1673975723009085454,1001241,'20','
 let errmsg = nil;
 if(ZC != nil && L != nil && LA != nil && LB != nil && T != nil && HC != nil ){
     L=L-LA-LB-T-HC-2;
@@ -474,7 +467,7 @@ if(ZC != nil && L != nil && LA != nil && LB != nil && T != nil && HC != nil ){
 }
 return true;
 
-','0',now() ,'脚本四十三：0≦ ZC ≦ L-LA-LB-T-HC-2'),(1671338162105188354,1001241,'20','fn constant(L,LA,LB,T) {
+','0',now() ,'脚本四十三：0≦ ZC ≦ L-LA-LB-T-HC-2'),(1673975723009085455,1001241,'20','fn constant(L,LA,LB,T) {
   let  l=L-LA-LB-T;
   return l;
 }
@@ -490,7 +483,7 @@ if(HC != nil && L != nil && LA != nil && LB != nil && T != nil && ZC != nil ){
 }
 return true;
 
-','0',now() ,'脚本四十四：0≦HC≦ℓ-ZC-2'),(1671338162105188355,1001241,'20','fn constant(L,LA,LB,T) {
+','0',now() ,'脚本四十四：0≦HC≦ℓ-ZC-2'),(1673975723009085456,1001241,'20','fn constant(L,LA,LB,T) {
   let  l=L-LA-LB-T;
   return l;
 }
@@ -506,7 +499,7 @@ if(ZD != nil && L != nil && LA != nil && LB != nil && T != nil && HD != nil ){
 }
 return true;
 
-','0',now() ,'脚本四十五：0 ≦ ZD ≦ℓ-HD-2'),(1671338162105188356,1001241,'20','fn constant(L,LA,LB,T) {
+','0',now() ,'脚本四十五：0 ≦ ZD ≦ℓ-HD-2'),(1673975723009085457,1001241,'20','fn constant(L,LA,LB,T) {
   let  l=L-LA-LB-T;
   return l;
 }
@@ -522,70 +515,79 @@ if(HD != nil && L != nil && LA != nil && LB != nil && T != nil && ZD != nil){
 }
 return true;
 
-','0',now() ,'脚本四十六：0 ≦ HD ≦ℓ-ZD-2'),(1671338162105188357,1001241,'20','let a=seq.list(27,31,33,34,36,37,38,39);
-let b=seq.list(27,31,33,34,36,37,38,39);
+','0',now() ,'脚本四十六：0 ≦ HD ≦ℓ-ZD-2'),(1673975723009085458,1001241,'20','let a=seq.list(27,31,33,34,36,37,38,39);
 let errmsg = nil;
-if(TA!= nil && P != nil && Q != nil){
+if(TA!= nil && P != nil){
     if(include(a,P)){
       errmsg = "P=27,31,33,34,36～39,41～44,46～48 不可制作此追加工 TA ";
       return errmsg;
-    }elsif(include(b,Q)){
-      errmsg = "P=27,31,33,34,36～39,41～44,46～48 不可制作此追加工 TA ";
+    }
+
+}
+return true;
+
+
+','0',now() ,'脚本四十七： TA P=27,31,33,34,36～39，41～44，46～48 或 Q=27,31,33,34,36～39，41～44，46～48不可制作此追加'),(1673975723009085459,1001241,'20','let errmsg = nil;
+let b=seq.list(27,31,33,34,36,37,38,39);
+if(TA!= nil  && Q != nil){
+   if(include(b,Q)){
+      errmsg = "Q=27,31,33,34,36～39,41～44,46～48 不可制作此追加工 TA ";
       return errmsg;
     }
 }
 return true;
 
-','0',now() ,'脚本四十七： TA P=27,31,33,34,36～39，41～44，46～48 或 Q=27,31,33,34,36～39，41～44，46～48不可制作此追加'),(1671338162105188358,1001241,'20','let errmsg = nil;
-if(TB!= nil && P != nil && Q != nil ){
+
+
+','0',now() ,'脚本四十七：Q=27,31,33,34,36～39，41～44，46～48不可制作此追加'),(1673975723009085460,1001241,'20','let errmsg = nil;
+let a=seq.list(27,31,33,34,36,37,38,39);
+if(TB!= nil && P != nil ){
     if(include(a,P)){
       errmsg = "P=27,31,33,34,36～39,41～44,46～48 不可制作此追加工 TB ";
       return errmsg;
-    }elsif(include(b,Q)){
+    }
+}
+return true;
+
+
+','0',now() ,'脚本四十八：TB  P=27,31,33,34,36～39，41～44，46～48或'),(1673975723009085461,1001241,'20','
+let errmsg = nil;
+let b=seq.list(27,31,33,34,36,37,38,39);
+if(TB!= nil && Q != nil ){
+    if(include(b,Q)){
       errmsg = "P=27,31,33,34,36～39,41～44,46～48 不可制作此追加工 TB ";
       return errmsg;
     }
 }
 return true;
 
-','0',now() ,'脚本四十八：TB  P=27,31,33,34,36～39，41～44，46～48或Q=27,31,33,34,36～39，41～44，46～48不可制作此追加工'),(1671338162105188359,1001241,'20','let errmsg = nil;
-if(TD!= nil && P != nil && Q != nil ){
-    if(P==27 ||  P==31 ||  P==33|| P==34 ){
-            errmsg = "P=27,31,33,34,36～39，41～44，46～48 不可制作此追加工 TD ";
-            return errmsg;
-    }
-    if(36<=P && P<=39){
-           errmsg = "P=27,31,33,34,36～39，41～44，46～48 不可制作此追加工 TD";
-           return errmsg;
-    }
-    if(41<=P && P<=44){
-         errmsg = "P=27,31,33,34,36～39，41～44，46～48 不可制作此追加工 TD";
-         return errmsg;
-    }
-    if( 46<=P && P<= 48){
-          errmsg = "P=27,31,33,34,36～39，41～44，46～48 不可制作此追加工 TD";
-          return errmsg;
-    }
-    if(Q==27 ||  P==31 ||  P==33|| P==34 ){
-          errmsg = "Q=27,31,33,34,36～39，41～44，46～48 不可制作此追加工 TD";
-          return errmsg;
-    }
-    if(36<=Q && Q<=39){
-       errmsg = "Q=27,31,33,34,36～39，41～44，46～48 不可制作此追加工 TD";
-       return errmsg;
-    }
-    if(41<=Q && Q<=44){
-       errmsg = "Q=27,31,33,34,36～39，41～44，46～48 不可制作此追加工 TD";
-       return errmsg;
-    }
-    if( 46<=Q && Q<= 48){
-       errmsg = "Q=27,31,33,34,36～39，41～44，46～48 不可制作此追加工 TD";
-       return errmsg;
+
+
+','0',now() ,'脚本四十八：Q=27,31,33,34,36～39，41～44，46～48不可制作此追加工'),(1673975723009085462,1001241,'20','
+let errmsg = nil;
+let a=seq.list(27,31,33,34,36,37,38,39);
+if(TD!= nil && Q != nil ){
+    if(include(a,Q)){
+      errmsg = "P=27,31,33,34,36～39,41～44,46～48 不可制作此追加工 TD ";
+      return errmsg;
     }
 }
 return true;
 
-','0',now() ,'脚本四十九：TD  P=27,31,33,34,36～39，41～44，46～48或Q=27,31,33,34,36～39，41～44，46～48不可制作此追加工'),(1671338162105188360,1001241,'20','let errmsg = nil;
+','0',now() ,'脚本四十九：TD  P=27,31,33,34,36～39，41～44，46～48'),(1673975723009085463,1001241,'20','
+let errmsg = nil;
+let a=seq.list(27,31,33,34,36,37,38,39);
+if(TD!= nil && Q != nil ){
+    if(include(a,Q)){
+      errmsg = "Q=27,31,33,34,36～39,41～44,46～48 不可制作此追加工 TD ";
+      return errmsg;
+    }
+}
+return true;
+
+
+
+','0',now() ,'脚本四十九：Q=27,31,33,34,36～39，41～44，46～48不可制作此追加工'),(1673975723009085464,1001241,'20','let errmsg = nil;
 if(TA != nil && LA != nil){
     LA=LA-3;
     if(TA <= LA ){
@@ -597,7 +599,7 @@ if(TA != nil && LA != nil){
 }
 return true;
 
-','0',now() ,'脚本五十： TA ≦ LA-3'),(1671338162105188361,1001241,'20','let errmsg = nil;
+','0',now() ,'脚本五十： TA ≦ LA-3'),(1673975723009085465,1001241,'20','let errmsg = nil;
 if(TB != nil && LB != nil){
     LB=LB-3;
     if(TB <= LB ){
@@ -609,7 +611,7 @@ if(TB != nil && LB != nil){
 }
 return true;
 
-','0',now() ,'脚本五十一：TB ≦ LB-3'),(1671338162105188362,1001241,'20','fn constant(L,LA,LB,T) {
+','0',now() ,'脚本五十一：TB ≦ LB-3'),(1673975723009085466,1001241,'20','fn constant(L,LA,LB,T) {
   let  l=L-LA-LB-T;
   return l;
 }
@@ -625,7 +627,7 @@ if(TD != nil && L != nil && LA != nil && LB != nil && T != nil ){
 }
 return true;
 
-','0',now() ,'脚本五十二： TD ≦ ℓ-3'),(1671338162105188363,1001241,'20','fn getConstant(P) {
+','0',now() ,'脚本五十二： TD ≦ ℓ-3'),(1673975723013279744,1001241,'20','fn getConstant(P) {
   let  l=0;
   if( 5<=P && P<= 10){
     l=8;
@@ -656,7 +658,7 @@ if(SA != nil && LA != nil && P != nil ){
 return true;
 
 
-','0',now() ,'脚本五十三：0≦ SA ≦ LA-ℓ'),(1671338162105188364,1001241,'20','fn getConstant(Q) {
+','0',now() ,'脚本五十三：0≦ SA ≦ LA-ℓ'),(1673975723013279745,1001241,'20','fn getConstant(Q) {
   let  l=0;
   if( 5<=Q && Q<= 10){
     l=8;
@@ -686,7 +688,7 @@ if(SB != nil && LB != nil && Q != nil ){
 }
 return true;
 
-','0',now() ,'脚本五十四：0≦SB≦LB-ℓ'),(1671338162109382656,1001241,'20','let errmsg = nil;
+','0',now() ,'脚本五十四：0≦SB≦LB-ℓ'),(1673975723013279746,1001241,'20','let errmsg = nil;
 if(WA != nil && LA != nil && GA != nil ){
     LA=LA-GA-2;
     if(WA >=0 && WA <= LA ){
@@ -698,7 +700,7 @@ if(WA != nil && LA != nil && GA != nil ){
 }
 return true;
 
-','0',now() ,'脚本五十五：0 ≦ WA ≦ LA-GA-2'),(1671338162109382657,1001241,'20','let errmsg = nil;
+','0',now() ,'脚本五十五：0 ≦ WA ≦ LA-GA-2'),(1673975723013279747,1001241,'20','let errmsg = nil;
 if(WB != nil && LB != nil && GB != nil ){
     LB=LB-GB-2;
     if(WB >=0 && WB <= LB ){
@@ -710,7 +712,7 @@ if(WB != nil && LB != nil && GB != nil ){
 }
 return true;
 
-','0',now() ,'脚本五十六：0 ≦ WB ≦ LB-GB-2'),(1671338162109382658,1001241,'20','fn constant(L,LA,LB,T) {
+','0',now() ,'脚本五十六：0 ≦ WB ≦ LB-GB-2'),(1673975723013279748,1001241,'20','fn constant(L,LA,LB,T) {
   let  l=L-LA-LB-T;
   return l;
 }
