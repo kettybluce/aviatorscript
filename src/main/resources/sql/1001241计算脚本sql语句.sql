@@ -1,5 +1,5 @@
 DELETE FROM `goods_rule` WHERE spu='1001241' AND rule_type='10';
-INSERT INTO goods_rule (rule_id,spu, rule_type, expression,`enable`,create_time,remark) VALUES (1674356619738914816,1001241,'10','let p = productSearchSkuInfo;
+INSERT INTO goods_rule (rule_id,spu, rule_type, expression,`enable`,create_time,remark) VALUES (1674704107414548480,1001241,'10','let p = productSearchSkuInfo;
 let list=p.specList;
 let D=specType;
 let scMax = nil;

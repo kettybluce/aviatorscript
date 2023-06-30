@@ -1,1 +1,1 @@
-let errmsg = nil;if(ZA != nil  && LA != nil && HA != nil ){    LA=LA-HA-2;    println("LA的值"+LA);    if(ZA>=0 && ZA <= LA ){             return true;          }else{             errmsg = "需满足公式 0≦ ZA ≦ LA-HA-2 ";             return errmsg;        }}return true;
+
