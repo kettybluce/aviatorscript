@@ -1,1 +1,1 @@
-
+let AA=100.15;AA=AA*100;AA=math.ceil(AA);AA=AA/100;println(AA);
