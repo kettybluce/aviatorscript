@@ -1,94 +1,72 @@
-##脚本： WA ≦ LA-GA
+##脚本：KA必须与KB与KC同时存在
 let errmsg = nil;
-if(WA!= nil && LA!= nil && GA!= nil){
-   WA=decimal(WA);
-   LA=decimal(LA);
-   GA=decimal(GA);
-   let LA=LA-GA;
-   if(WA<=LA){
-       return true;
-   }else{
-       errmsg = "需满足公式 WA≦LA-GA";
-       return errmsg;
-   }
-}
-return true;
-##脚本：KA与HA_1同时存在
-let errmsg = nil;
-if((KA!= nil && HA_1!= nil)||(KA== nil && HA_1== nil)){
+if((KA!= nil && KB!= nil && KC!= nil)||(KA== nil && KB== nil) && KC== nil)){
     return true;
 } else {
-   errmsg = "KA与HA_1同时存在";
+   errmsg = "型号中需指定下述参数。（FE FW FY）";
    return errmsg;
 }
-##脚本：(LA+LB)*2≦L
+
+##脚本：HA必须与HB与HC同时存在
 let errmsg = nil;
-if(L!= nil && LA!= nil && LB!= nil){
-   L=decimal(L);
-   LA=decimal(LA);
-   LB=decimal(LB);
-   let LA=(LA+LB)*2;
-   if(L>=LA){
-       return true;
-   }else{
-       errmsg = "需满足公式 (LA+LB)*2≦L";
-       return errmsg;
-   }
+if((HA!= nil && HB!= nil && HC!= nil)||(HA== nil && HB== nil) && HC== nil)){
+    return true;
+} else {
+   errmsg = "型号中需指定下述参数。（FE FW FY）";
+   return errmsg;
 }
-return true;
-##脚本：MA≦LA-2
+
+##脚本：ZA必须与ZB与ZC同时存在
 let errmsg = nil;
-if(MA!= nil && LA!= nil){
-   MA=decimal(MA);
-   LA=decimal(LA);
-   let LA=LA-2;
-   if(MA<=LA){
-       return true;
-   }else{
-       errmsg = "需满足公式 MA≦LA-2";
-       return errmsg;
-   }
+if((ZA!= nil && ZB!= nil && ZC!= nil)||(ZA== nil && ZB== nil) && ZC== nil)){
+    return true;
+} else {
+   errmsg = "型号中需指定下述参数。（FE FW FY）";
+   return errmsg;
 }
-return true;
-##脚本：MSA ≦ LA-2
+
+##脚本：HA必须与HB与HC同时存在
 let errmsg = nil;
-if(MSA!= nil && LA!= nil){
-   MSA=decimal(MSA);
-   LA=decimal(LA);
-   let LA=LA-2;
-   if(MSA<=LA){
-       return true;
-   }else{
-       errmsg = "需满足公式 MSA≦LA-2";
-       return errmsg;
-   }
+if((HA!= nil && HB!= nil && HC!= nil)||(HA== nil && HB== nil) && HC== nil)){
+    return true;
+} else {
+   errmsg = "型号中需指定下述参数。（FE FW FY）";
+   return errmsg;
 }
-return true;
-##脚本： MMA ≦ LA-2
+
+##脚本：AA必须与AB与AC同时存在
 let errmsg = nil;
-if(MMA!= nil && LA!= nil){
-   MMA=decimal(MMA);
-   LA=decimal(LA);
-   let LA=LA-2;
-   if(MMA<=LA){
-       return true;
-   }else{
-       errmsg = "需满足公式 MMA≦LA-2";
-       return errmsg;
-   }
+if((AA!= nil && AB!= nil && AC!= nil)||(AA== nil && AB== nil) && AC== nil)){
+    return true;
+} else {
+   errmsg = "型号中需指定下述参数。（FE FW FY）";
+   return errmsg;
 }
-return true;
-##脚本： MB ≦ LB-2
+
+##脚本：WA必须与WB与WC同时存在
 let errmsg = nil;
-if(MB!= nil && LB!= nil){
-   MB=decimal(MB);
-   LB=decimal(LB);
-   let LB=LB-2;
-   if(MB<=LB){
-       return true;
-   }else{
-       errmsg = "需满足公式 MB≦LB-2";
-       return errmsg;
-   }
+if((WA!= nil && WB!= nil && WC!= nil)||(WA== nil && WB== nil) && WC== nil)){
+    return true;
+} else {
+   errmsg = "型号中需指定下述参数。（FE FW FY）";
+   return errmsg;
 }
-return true;
+
+##脚本：AA必须与AB与AC同时存在
+let errmsg = nil;
+if((AA!= nil && AB!= nil && AC!= nil)||(AA== nil && AB== nil) && AC== nil)){
+    return true;
+} else {
+   errmsg = "型号中需指定下述参数。（FE FW FY）";
+   return errmsg;
+}
+
+##脚本：GA必须与GB与GC同时存在
+let errmsg = nil;
+if((GA!= nil && GB!= nil && GC!= nil)||(GA== nil && GB== nil) && GC== nil)){
+    return true;
+} else {
+   errmsg = "型号中需指定下述参数。（FE FW FY）";
+   return errmsg;
+}
+
