@@ -1,8 +1,8 @@
-##脚本：KA必须与KB与KC同时存在
-##脚本：HA必须与HB与HC同时存在
-##脚本：ZA必须与ZB与ZC同时存在
-##脚本：HA必须与HB与HC同时存在
-##脚本：AA必须与AB与AC同时存在
-##脚本：WA必须与WB与WC同时存在
-##脚本：AA必须与AB与AC同时存在
-##脚本：GA必须与GB与GC同时存在
+##脚本：KA,HA
+##脚本：KB,HB
+##脚本：KC,HC
+##脚本：ZA,HA_2,AA
+##脚本：ZB,HB_2,AB
+##脚本：ZC,HC_2,AC
+##脚本：WA,GA,AA_2
+##脚本：WB,GB,AB_2
