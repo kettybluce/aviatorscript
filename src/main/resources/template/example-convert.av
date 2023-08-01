@@ -1,29 +1,83 @@
-##脚本：ZD_2≥ZC_2+HC_2+1
+##脚本：ZD_2≥ZC_2+D+HC_2+1
 let errmsg = nil;
-if(ZD_2!= nil && ZC_2!= nil && HC_2!= nil){
+if(ZD_2!= nil && ZC_2!= nil && D!= nil && HC_2!= nil){
    ZD_2=decimal(ZD_2);
    ZC_2=decimal(ZC_2);
+   D=decimal(D);
    HC_2=decimal(HC_2);
-   let ZC_2=ZC_2+HC_2+1;
+   let ZC_2=ZC_2+D+HC_2+1;
    if(ZD_2>=ZC_2){
        return true;
    }else{
-       errmsg = "需满足公式 ZD_2≥ZC_2+HC_2+1";
+       errmsg = "需满足公式 ZD_2≥ZC_2+D+HC_2+1";
        return errmsg;
    }
 }
 return true;
 
-##脚本：ZD_2≥ZC_2+1
+##脚本：ZC_2+1+D≥ZD_2
 let errmsg = nil;
-if(ZD_2!= nil && ZC_2!= nil){
+if(ZD_2!= nil && ZC_2!= nil && D!= nil){
    ZD_2=decimal(ZD_2);
    ZC_2=decimal(ZC_2);
-   let ZC_2=ZC_2+1;
+   D=decimal(D);
+   let ZC_2=ZC_2+1+D;
+   if(ZD_2<=ZC_2){
+       return true;
+   }else{
+       errmsg = "需满足公式 ZC_2+1+D≥ZD_2";
+       return errmsg;
+   }
+}
+return true;
+
+##脚本：ZD_2≤ZC_2+D+HC_2+1
+let errmsg = nil;
+if(ZD_2!= nil && ZC_2!= nil && D!= nil && HC_2!= nil){
+   ZD_2=decimal(ZD_2);
+   ZC_2=decimal(ZC_2);
+   D=decimal(D);
+   HC_2=decimal(HC_2);
+   let ZC_2=ZC_2+D+HC_2+1;
+   if(ZD_2<=ZC_2){
+       return true;
+   }else{
+       errmsg = "需满足公式 ZD_2≤ZC_2+D+HC_2+1";
+       return errmsg;
+   }
+}
+return true;
+
+##脚本：ZC_2+1+D≤ZD_2
+let errmsg = nil;
+if(ZD_2!= nil && ZC_2!= nil && D!= nil){
+   ZD_2=decimal(ZD_2);
+   ZC_2=decimal(ZC_2);
+   D=decimal(D);
+   let ZC_2=ZC_2+1+D;
    if(ZD_2>=ZC_2){
        return true;
    }else{
-       errmsg = "需满足公式 ZD_2≥ZC_2+1";
+       errmsg = "需满足公式 ZC_2+1+D≤ZD_2";
+       return errmsg;
+   }
+}
+return true;
+
+##脚本：SD≤L-LA-LB-LC-l1
+let errmsg = nil;
+if(SD!= nil && L!= nil && LA!= nil && LB!= nil && LC!= nil){
+   SD=decimal(SD);
+   L=decimal(L);
+   LA=decimal(LA);
+   LB=decimal(LB);
+   LC=decimal(LC);
+   let l=getConstant(D);
+   let L=L-LA-LB-LC-l;
+   if(SD<=L){
+       return true;
+   }else{
+       errmsg = "需满足公式 SD≤L-LA-LB-LC-l1";
        return errmsg;
    }
 }
