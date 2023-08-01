@@ -1,1 +1,1 @@
-let AA=100.15;AA=AA*100;AA=math.ceil(AA);AA=AA/100;if(A=="abc"){print("成功");}else{print("失败");}return true;
+let errmsg = nil;if(MMD!= nil && type =="KZCE"){    errmsg = "[参数指定错误] 参数不能为MMD"+MMD;    return errmsg;}return true;
