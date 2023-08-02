@@ -1,0 +1,42 @@
+##脚本：HB≤KC-KB-2
+if(inputInspection(appendSpec,"KC") && inputInspection(appendSpec,"KB") ){
+    let KC=fetchValue(appendSpec,"KC");
+    let KB=fetchValue(appendSpec,"KB");
+    KC=KC-KB-2;
+    changeMaximum(KC,list,"HB",true);
+}
+##脚本：KB≤KC-HB-2
+if(inputInspection(appendSpec,"KC") && inputInspection(appendSpec,"HB") ){
+    let KC=fetchValue(appendSpec,"KC");
+    let HB=fetchValue(appendSpec,"HB");
+    KC=KC-HB-2;
+    changeMaximum(KC,list,"KB",true);
+}
+##脚本：HB≤KC-KB-2
+if(inputInspection(appendSpec,"KC") && inputInspection(appendSpec,"KB") ){
+    let KC=fetchValue(appendSpec,"KC");
+    let KB=fetchValue(appendSpec,"KB");
+    KC=KC-KB-2;
+    changeMaximum(KC,list,"HB",true);
+}
+##脚本：KB≤KC-HB-2
+if(inputInspection(appendSpec,"KC") && inputInspection(appendSpec,"HB") ){
+    let KC=fetchValue(appendSpec,"KC");
+    let HB=fetchValue(appendSpec,"HB");
+    KC=KC-HB-2;
+    changeMaximum(KC,list,"KB",true);
+}
+##脚本：HB_2≤ZC-ZB-2
+if(inputInspection(appendSpec,"ZC") && inputInspection(appendSpec,"ZB") ){
+    let ZC=fetchValue(appendSpec,"ZC");
+    let ZB=fetchValue(appendSpec,"ZB");
+    ZC=ZC-ZB-2;
+    changeMaximum(ZC,list,"HB_2",true);
+}
+##脚本：ZB≤ZC-HB_2-2
+if(inputInspection(appendSpec,"ZC") && inputInspection(appendSpec,"HB_2") ){
+    let ZC=fetchValue(appendSpec,"ZC");
+    let HB_2=fetchValue(appendSpec,"HB_2");
+    ZC=ZC-HB_2-2;
+    changeMaximum(ZC,list,"ZB",true);
+}

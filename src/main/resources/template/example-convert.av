@@ -1,27 +1,94 @@
-##脚本：3 ≤HA≤ 100
+##脚本：HB≤KC-KB-2
 let errmsg = nil;
-if(HA!= nil){
-   HA=decimal(HA);
-   if(3<=HA && HA<=100){
+if(HB!= nil && KC!= nil && KB!= nil){
+   HB=decimal(HB);
+   KC=decimal(KC);
+   KB=decimal(KB);
+   let KC=KC-KB-2;
+   if(HB<=KC){
        return true;
    }else{
-       errmsg = "需满足公式 3≤HA≤100";
+       errmsg = "需满足公式 HB≤KC-KB-2";
        return errmsg;
    }
 }
 return true;
 
-##脚本：3 ≤HC≤ HA+HB_1
+##脚本：KB≤KC-HB-2
 let errmsg = nil;
-if(HC!= nil && HA!= nil && HB_1!= nil){
-   HC=decimal(HC);
-   HA=decimal(HA);
-   HB_1=decimal(HB_1);
-   let HA=HA+HB_1;
-   if(3<=HC && HC<=HA){
+if(KB!= nil && KC!= nil && HB!= nil){
+   KB=decimal(KB);
+   KC=decimal(KC);
+   HB=decimal(HB);
+   let KC=KC-HB-2;
+   if(KB<=KC){
        return true;
    }else{
-       errmsg = "需满足公式 3≤HC≤HA+HB_1";
+       errmsg = "需满足公式 KB≤KC-HB-2";
+       return errmsg;
+   }
+}
+return true;
+
+##脚本：HB≤KC-KB-2
+let errmsg = nil;
+if(HB!= nil && KC!= nil && KB!= nil){
+   HB=decimal(HB);
+   KC=decimal(KC);
+   KB=decimal(KB);
+   let KC=KC-KB-2;
+   if(HB<=KC){
+       return true;
+   }else{
+       errmsg = "需满足公式 HB≤KC-KB-2";
+       return errmsg;
+   }
+}
+return true;
+
+##脚本：KB≤KC-HB-2
+let errmsg = nil;
+if(KB!= nil && KC!= nil && HB!= nil){
+   KB=decimal(KB);
+   KC=decimal(KC);
+   HB=decimal(HB);
+   let KC=KC-HB-2;
+   if(KB<=KC){
+       return true;
+   }else{
+       errmsg = "需满足公式 KB≤KC-HB-2";
+       return errmsg;
+   }
+}
+return true;
+
+##脚本：HB_2≤ZC-ZB-2
+let errmsg = nil;
+if(HB_2!= nil && ZC!= nil && ZB!= nil){
+   HB_2=decimal(HB_2);
+   ZC=decimal(ZC);
+   ZB=decimal(ZB);
+   let ZC=ZC-ZB-2;
+   if(HB_2<=ZC){
+       return true;
+   }else{
+       errmsg = "需满足公式 HB_2≤ZC-ZB-2";
+       return errmsg;
+   }
+}
+return true;
+
+##脚本：ZB≤ZC-HB_2-2
+let errmsg = nil;
+if(ZB!= nil && ZC!= nil && HB_2!= nil){
+   ZB=decimal(ZB);
+   ZC=decimal(ZC);
+   HB_2=decimal(HB_2);
+   let ZC=ZC-HB_2-2;
+   if(ZB<=ZC){
+       return true;
+   }else{
+       errmsg = "需满足公式 ZB≤ZC-HB_2-2";
        return errmsg;
    }
 }
