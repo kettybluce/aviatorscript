@@ -1,5 +1,5 @@
 DELETE FROM `goods_rule` WHERE spu='1001246' AND rule_type='10';
-INSERT INTO goods_rule (rule_id,spu, rule_type, expression,`enable`,create_time,remark) VALUES (1684810297876258816,1001246,'10','let p = productSearchSkuInfo;
+INSERT INTO goods_rule (rule_id,spu, rule_type, expression,`enable`,create_time,remark) VALUES (1688433101762768896,1001246,'10','let p = productSearchSkuInfo;
 let list=p.specList;
 let D=specType;
 let scMax = nil;
@@ -134,6 +134,7 @@ if(inputInspection(attrSpec,"L") && inputInspection(appendSpec,"HA")){
     let L=fetchValue(attrSpec,"L");
     let HA=fetchValue(appendSpec,"HA");
     L=L-HA;
+    L=decimal(math.floor(L));
     changeMaximum(L,list,"KA",true);
 }
 if(inputInspection(appendSpec,"KB") && inputInspection(appendSpec,"HB") && inputInspection(appendSpec,"HA")){
@@ -146,8 +147,9 @@ if(inputInspection(appendSpec,"KB") && inputInspection(appendSpec,"HB") && input
 if((type=="KZAC" && D==20)||(type=="KZAF" && D==17) || (type=="KZAN" && D==20)){
     if(inputInspection(attrSpec,"L") && inputInspection(appendSpec,"KA")){
         let L=fetchValue(attrSpec,"L");
-        let KC=fetchValue(appendSpec,"KC");
-        L=L-KC;
+        let KA=fetchValue(appendSpec,"KA");
+        L=L-KA;
+        L=decimal(math.floor(L));
         if(L>=100){
             changeMaximum(100,list,"HA",true);
         }else{
@@ -162,14 +164,16 @@ if((type=="KZAC" && D==20)||(type=="KZAF" && D==17) || (type=="KZAN" && D==20)){
     }
 }elsif(inputInspection(attrSpec,"L") && inputInspection(appendSpec,"KA")){
      let L=fetchValue(attrSpec,"L");
-     let KC=fetchValue(appendSpec,"KC");
-     let newL=L-KC;
+     let KA=fetchValue(appendSpec,"KA");
+     let newL=L-KA;
+     newL=decimal(math.floor(newL));
      changeMaximum(newL,list,"HA",true);
 }
 if(inputInspection(attrSpec,"L") && inputInspection(appendSpec,"HB")){
     let L=fetchValue(attrSpec,"L");
     let HB=fetchValue(appendSpec,"HB");
     L=L-HB;
+    L=decimal(math.floor(L));
     changeMaximum(L,list,"KB",true);
 }
 if(inputInspection(appendSpec,"HA") && inputInspection(appendSpec,"KA")){
@@ -194,6 +198,7 @@ if(inputInspection(attrSpec,"L") && inputInspection(appendSpec,"HC")){
     let L=fetchValue(attrSpec,"L");
     let HC=fetchValue(appendSpec,"HC");
     L=L-HC;
+    L=decimal(math.floor(L));
     changeMaximum(L,list,"KC",true);
 }
 if((type=="KZAC" && D==20)||(type=="KZAF" && D==17) || (type=="KZAN" && D==20)){
@@ -201,6 +206,7 @@ if((type=="KZAC" && D==20)||(type=="KZAF" && D==17) || (type=="KZAN" && D==20)){
         let L=fetchValue(attrSpec,"L");
         let KB=fetchValue(appendSpec,"KB");
         L=L-KB;
+        L=decimal(math.floor(L));
         if(L>=100){
             changeMaximum(100,list,"HB",true);
         }else{
@@ -216,6 +222,7 @@ if((type=="KZAC" && D==20)||(type=="KZAF" && D==17) || (type=="KZAN" && D==20)){
         let L=fetchValue(attrSpec,"L");
         let KB=fetchValue(appendSpec,"KB");
         let newL=L-KB;
+        newL=decimal(math.floor(newL));
         changeMaximum(newL,list,"HA",true);
 }
 if((type=="KZAC" && D==20)||(type=="KZAF" && D==17)||(type=="KZAN" && D==20)){
@@ -223,6 +230,7 @@ if((type=="KZAC" && D==20)||(type=="KZAF" && D==17)||(type=="KZAN" && D==20)){
         let L=fetchValue(attrSpec,"L");
         let KC=fetchValue(appendSpec,"KC");
         L=L-KC;
+        L=decimal(math.floor(L));
         if(L>=100){
             changeMaximum(100,list,"HC",true);
         }else{
@@ -238,6 +246,7 @@ if((type=="KZAC" && D==20)||(type=="KZAF" && D==17)||(type=="KZAN" && D==20)){
         let L=fetchValue(attrSpec,"L");
         let KC=fetchValue(appendSpec,"KC");
         let newL=L-KC;
+        newL=decimal(math.floor(newL));
         changeMaximum(newL,list,"HC",true);
 }
 if((type=="KZAC" && D==20)||(type=="KZAF" && D==17)||(type=="KZAN" && D==20)){
@@ -245,6 +254,7 @@ if((type=="KZAC" && D==20)||(type=="KZAF" && D==17)||(type=="KZAN" && D==20)){
         let L=fetchValue(attrSpec,"L");
         let KD=fetchValue(appendSpec,"KD");
         L=L-KD;
+        L=decimal(math.floor(L));
         if(L>=100){
             changeMaximum(100,list,"HD",true);
         }else{
@@ -255,12 +265,14 @@ if((type=="KZAC" && D==20)||(type=="KZAF" && D==17)||(type=="KZAN" && D==20)){
         let L=fetchValue(attrSpec,"L");
         let KD=fetchValue(appendSpec,"KD");
         let newL=L-KD;
+        newL=decimal(math.floor(newL));
         changeMaximum(newL,list,"HD",true);
 }
 if(inputInspection(attrSpec,"L") && inputInspection(appendSpec,"HA")){
     let L=fetchValue(attrSpec,"L");
     let HA=fetchValue(appendSpec,"HA");
     L=L-HA;
+    L=decimal(math.floor(L));
     changeMaximum(L,list,"ZA",true);
 }
 if((type=="KZAC" && D==20)||(type=="KZAF" && D==17)||(type=="KZAN" && D==20)){
@@ -268,6 +280,7 @@ if((type=="KZAC" && D==20)||(type=="KZAF" && D==17)||(type=="KZAN" && D==20)){
         let L=fetchValue(attrSpec,"L");
         let ZA=fetchValue(appendSpec,"ZA");
         L=L-ZA;
+        L=decimal(math.floor(L));
         if(L>=100){
             changeMaximum(100,list,"HA_2",true);
         }else{
@@ -278,12 +291,14 @@ if((type=="KZAC" && D==20)||(type=="KZAF" && D==17)||(type=="KZAN" && D==20)){
         let L=fetchValue(attrSpec,"L");
         let ZA=fetchValue(appendSpec,"ZA");
         let newL=L-ZA;
+        newL=decimal(math.floor(newL));
         changeMaximum(newL,list,"HA_2",true);
 }
 if(inputInspection(attrSpec,"L") && inputInspection(appendSpec,"HB_2")){
     let L=fetchValue(attrSpec,"L");
     let HB_2=fetchValue(appendSpec,"HB_2");
     L=L-HB_2;
+    L=decimal(math.floor(L));
     changeMaximum(L,list,"ZB",true);
 }
 if((type=="KZAC" && D==20)||(type=="KZAF" && D==17)||(type=="KZAN" && D==20)){
@@ -291,6 +306,7 @@ if((type=="KZAC" && D==20)||(type=="KZAF" && D==17)||(type=="KZAN" && D==20)){
         let L=fetchValue(attrSpec,"L");
         let ZB=fetchValue(appendSpec,"ZB");
         L=L-ZB;
+        L=decimal(math.floor(L));
         if(L>=100){
             changeMaximum(100,list,"HB_2",true);
         }else{
@@ -301,12 +317,14 @@ if((type=="KZAC" && D==20)||(type=="KZAF" && D==17)||(type=="KZAN" && D==20)){
         let L=fetchValue(attrSpec,"L");
         let ZB=fetchValue(appendSpec,"ZB");
         let newL=L-ZB;
+        newL=decimal(math.floor(newL));
         changeMaximum(newL,list,"HB_2",true);
 }
 if(inputInspection(attrSpec,"L") && inputInspection(appendSpec,"HD_2")){
     let L=fetchValue(attrSpec,"L");
     let HD_2=fetchValue(appendSpec,"HD_2");
     L=L-HD_2;
+    L=decimal(math.floor(L));
     changeMaximum(L,list,"ZD",true);
 }
 if((type=="KZAC" && D==20)||(type=="KZAF" && D==17)||(type=="KZAN" && D==20)){
@@ -314,6 +332,7 @@ if((type=="KZAC" && D==20)||(type=="KZAF" && D==17)||(type=="KZAN" && D==20)){
         let L=fetchValue(attrSpec,"L");
         let ZC=fetchValue(appendSpec,"ZC");
         L=L-ZC;
+        L=decimal(math.floor(L));
         if(L>=100){
             changeMaximum(100,list,"HC_2",true);
         }else{
@@ -324,6 +343,7 @@ if((type=="KZAC" && D==20)||(type=="KZAF" && D==17)||(type=="KZAN" && D==20)){
         let L=fetchValue(attrSpec,"L");
         let ZC=fetchValue(appendSpec,"ZC");
         let newL=L-ZC;
+        newL=decimal(math.floor(newL));
         changeMaximum(newL,list,"HC_2",true);
 }
 if((type=="KZAC" && D==20)||(type=="KZAF" && D==17)||(type=="KZAN" && D==20)){
@@ -331,6 +351,7 @@ if((type=="KZAC" && D==20)||(type=="KZAF" && D==17)||(type=="KZAN" && D==20)){
         let L=fetchValue(attrSpec,"L");
         let ZD=fetchValue(appendSpec,"ZD");
         L=L-ZD;
+        L=decimal(math.floor(L));
         if(L>=100){
             changeMaximum(100,list,"HD_2",true);
         }else{
@@ -341,18 +362,21 @@ if((type=="KZAC" && D==20)||(type=="KZAF" && D==17)||(type=="KZAN" && D==20)){
         let L=fetchValue(attrSpec,"L");
         let ZD=fetchValue(appendSpec,"ZD");
         let newL=L-ZD;
+        newL=decimal(math.floor(newL));
         changeMaximum(newL,list,"HD_2",true);
 }
 if(inputInspection(attrSpec,"L") && inputInspection(appendSpec,"GA")){
     let L=fetchValue(attrSpec,"L");
     let GA=fetchValue(appendSpec,"GA");
     L=L-GA;
+    L=decimal(math.floor(L));
     changeMaximum(L,list,"WA",true);
 }
 if(inputInspection(attrSpec,"L") && inputInspection(appendSpec,"WA")){
     let L=fetchValue(attrSpec,"L");
     let WA=fetchValue(appendSpec,"WA");
     L=L-WA;
+    L=decimal(math.floor(L));
     changeMaximum(L,list,"GA",true);
 }
 if(inputInspection(appendSpec,"WA") && inputInspection(appendSpec,"GA")){
@@ -365,12 +389,14 @@ if(inputInspection(attrSpec,"L") && inputInspection(appendSpec,"GB")){
     let L=fetchValue(attrSpec,"L");
     let GB=fetchValue(appendSpec,"GB");
     L=L-GB;
+    L=decimal(math.floor(L));
     changeMaximum(L,list,"WB",true);
 }
 if(inputInspection(attrSpec,"L") && inputInspection(appendSpec,"WB")){
     let L=fetchValue(attrSpec,"L");
     let WB=fetchValue(appendSpec,"WB");
     L=L-WB;
+    L=decimal(math.floor(L));
     changeMaximum(L,list,"GB",true);
 }
 if(inputInspection(appendSpec,"WB") && inputInspection(appendSpec,"GB")){
@@ -383,13 +409,35 @@ if(inputInspection(attrSpec,"L") && inputInspection(appendSpec,"GC")){
     let L=fetchValue(attrSpec,"L");
     let GC=fetchValue(appendSpec,"GC");
     L=L-GC;
+    L=decimal(math.floor(L));
     changeMaximum(L,list,"WC",true);
 }
 if(inputInspection(attrSpec,"L") && inputInspection(appendSpec,"WC")){
     let L=fetchValue(attrSpec,"L");
     let WC=fetchValue(appendSpec,"WC");
     L=L-WC;
+    L=decimal(math.floor(L));
     changeMaximum(L,list,"GC",true);
+}
+if(inputInspection(appendSpec,"KC") && inputInspection(appendSpec,"HC") ){
+    let KC=fetchValue(appendSpec,"KC");
+    let HC=fetchValue(appendSpec,"HC");
+    KC=KC+HC+1;
+    changeMinimum(KC,list,"KD",true);
+}
+if(inputInspection(attrSpec,"L") && inputInspection(appendSpec,"HD") ){
+    let L=fetchValue(attrSpec,"L");
+    let HD=fetchValue(appendSpec,"HD");
+    L=L-HD;
+    L=decimal(math.floor(L));
+    changeMaximum(L,list,"KD",true);
+}
+if(inputInspection(attrSpec,"L") && inputInspection(appendSpec,"HC_2") ){
+    let L=fetchValue(attrSpec,"L");
+    let HC_2=fetchValue(appendSpec,"HC_2");
+    L=L-HC_2;
+    L=decimal(math.floor(L));
+    changeMaximum(L,list,"ZC",true);
 }
 return p;
 ','0',now() ,'1001246计算脚本')

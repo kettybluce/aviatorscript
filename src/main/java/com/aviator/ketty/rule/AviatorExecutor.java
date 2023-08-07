@@ -8,7 +8,7 @@ import com.googlecode.aviator.Options;
 import java.util.Map;
 
 
-public class AviatorExecutor {
+public final class AviatorExecutor {
 
     public static <T> T execute(Map<String, Object> context, String expression) {
 
@@ -16,14 +16,17 @@ public class AviatorExecutor {
 
         // 创建解释器
         AviatorEvaluatorInstance engine = AviatorEvaluator.newInstance(EvalMode.INTERPRETER);
+        // LRU 缓存
+        AviatorEvaluator.getInstance().useLRUExpressionCache(100000);
+
         // 打开跟踪执行
 
         engine.setOption(Options.USE_USER_ENV_AS_TOP_ENV_DIRECTLY, true);
-//        engine.setOption(Options.ALWAYS_PARSE_INTEGRAL_NUMBER_INTO_DECIMAL, true);
-//        engine.setOption(Options.ALWAYS_PARSE_FLOATING_POINT_NUMBER_INTO_DECIMAL, true);
+        engine.setOption(Options.ALWAYS_PARSE_INTEGRAL_NUMBER_INTO_DECIMAL, true);
+        engine.setOption(Options.ALWAYS_PARSE_FLOATING_POINT_NUMBER_INTO_DECIMAL, true);
 
 //        Map<String, Object> param = AviatorContext.buildMap(context);
-        T execute = (T) engine.execute(expression, context, true);
+        T execute = (T) engine.execute(expression, context, false);
         return execute;
     }
 }
