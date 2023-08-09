@@ -1,1 +1,8 @@
-
+##脚本：TB≤L-LA-T-3
+if(inputInspection(attrSpec,"L") && inputInspection(attrSpec,"LA")  && inputInspection(genSpec,"T") ){
+    let L=fetchValue(attrSpec,"L");
+    let LA=fetchValue(attrSpec,"LA");
+    let T=fetchValue(genSpec,"T");
+    L=L-LA-T-3;
+    changeMaximum(L,list,"TB",true);
+}

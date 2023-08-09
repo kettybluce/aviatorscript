@@ -1,5 +1,5 @@
 DELETE FROM `goods_rule` WHERE spu='1001242' AND rule_type='10';
-INSERT INTO goods_rule (rule_id,spu, rule_type, expression,`enable`,create_time,remark) VALUES (1687031989197410304,1001242,'10','let p = productSearchSkuInfo;
+INSERT INTO goods_rule (rule_id,spu, rule_type, expression,`enable`,create_time,remark) VALUES (1689157734530138112,1001242,'10','let p = productSearchSkuInfo;
 let list=p.specList;
 let D=specType;
 let scMax = nil;
@@ -132,6 +132,7 @@ let b=seq.list("17A");
 if(inputInspection(attrSpec,"LA")){
     let LA=fetchValue(attrSpec,"LA");
     LA=LA-2;
+    LA=decimal(math.floor(LA));
     changeMaximum(LA,list,"MA",true);
     changeMaximum(LA,list,"MSA",true);
     changeMaximum(LA,list,"MMA",true);
@@ -140,12 +141,14 @@ if(inputInspection(attrSpec,"LA") && inputInspection(appendSpec,"HA")){
     let LA=fetchValue(attrSpec,"LA");
     let HA=fetchValue(appendSpec,"HA");
     LA=LA-HA-2;
+    LA=decimal(math.floor(LA));
     changeMaximum(LA,list,"KA",true);
 }
 if(inputInspection(attrSpec,"LA") && inputInspection(appendSpec,"KA")){
     let LA=fetchValue(attrSpec,"LA");
     let KA=fetchValue(appendSpec,"KA");
     LA=LA-KA-2;
+    LA=decimal(math.floor(LA));
     changeMaximum(LA,list,"HA",true);
 }
 if(inputInspection(attrSpec,"L") && inputInspection(attrSpec,"LA")  && inputInspection(genSpec,"T") && inputInspection(appendSpec,"HB")){
@@ -154,6 +157,7 @@ if(inputInspection(attrSpec,"L") && inputInspection(attrSpec,"LA")  && inputInsp
     let T=fetchValue(genSpec,"T");
     let HB=fetchValue(appendSpec,"HB");
     L=L-LA-T-HB-2;
+    L=decimal(math.floor(L));
     changeMaximum(L,list,"KB",true);
 }
 if(inputInspection(attrSpec,"L") && inputInspection(attrSpec,"LA")  && inputInspection(genSpec,"T") && inputInspection(appendSpec,"KB")){
@@ -162,6 +166,7 @@ if(inputInspection(attrSpec,"L") && inputInspection(attrSpec,"LA")  && inputInsp
     let T=fetchValue(genSpec,"T");
     let KB=fetchValue(appendSpec,"KB");
     L=L-LA-T-KB-1;
+    L=decimal(math.floor(L));
     if(L>100){
         changeMaximum(100,list,"HB",true);
     }elsif(L<=100){
@@ -180,6 +185,7 @@ if(inputInspection(attrSpec,"L") && inputInspection(attrSpec,"LA")  && inputInsp
     let T=fetchValue(genSpec,"T");
     let HC=fetchValue(appendSpec,"HC");
     L=L-T-LA-HC-2;
+    L=decimal(math.floor(L));
     changeMaximum(L,list,"KC",true);
 }
 if(inputInspection(attrSpec,"L") && inputInspection(attrSpec,"LA")  && inputInspection(genSpec,"T") && inputInspection(appendSpec,"KC")){
@@ -188,6 +194,7 @@ if(inputInspection(attrSpec,"L") && inputInspection(attrSpec,"LA")  && inputInsp
     let T=fetchValue(genSpec,"T");
     let KC=fetchValue(appendSpec,"KC");
     L=L-LA-T-KC-2;
+    L=decimal(math.floor(L));
     if(L>100){
         changeMaximum(100,list,"HC",true);
     }elsif(L<=100){
@@ -198,17 +205,20 @@ if(inputInspection(attrSpec,"LA") && inputInspection(appendSpec,"HA_2")){
     let LA=fetchValue(attrSpec,"LA");
     let HA_2=fetchValue(appendSpec,"HA_2");
     LA=LA-HA_2-2;
+    L=decimal(math.floor(L));
     changeMaximum(LA,list,"ZA",true);
 }
 if(inputInspection(attrSpec,"LA") && inputInspection(appendSpec,"KA")){
     let LA=fetchValue(attrSpec,"LA");
     let KA=fetchValue(appendSpec,"KA");
     LA=LA-KA-2;
+    LA=decimal(math.floor(LA));
     changeMaximum(LA,list,"HA_2",true);
 }
 if(inputInspection(attrSpec,"LA")){
     let LA=fetchValue(attrSpec,"LA");
     LA=LA-3;
+    LA=decimal(math.floor(LA));
     changeMaximum(LA,list,"TA",true);
 }
 if(inputInspection(attrSpec,"LA") && D!=nil){
@@ -222,6 +232,7 @@ if(inputInspection(attrSpec,"LA") && D!=nil){
         l=getConstant(D);
     }
     LA=LA-l;
+    LA=decimal(math.floor(LA));
     changeMaximum(LA,list,"SA",true);
 }
 if(inputInspection(attrSpec,"L") && inputInspection(attrSpec,"LA") && inputInspection(genSpec,"T") && D!=nil){
@@ -237,18 +248,21 @@ if(inputInspection(attrSpec,"L") && inputInspection(attrSpec,"LA") && inputInspe
         l=getConstant(D);
     }
     L=L-LA-T-l;
+    L=decimal(math.floor(L));
     changeMaximum(L,list,"SB",true);
 }
 if(inputInspection(attrSpec,"LA") && inputInspection(appendSpec,"GA")){
     let LA=fetchValue(attrSpec,"LA");
     let GA=fetchValue(attrSpec,"GA");
     LA=LA-GA;
+    LA=decimal(math.floor(LA));
     changeMaximum(LA,list,"WA",true);
 }
 if(inputInspection(attrSpec,"LA") && inputInspection(appendSpec,"WA")){
     let LA=fetchValue(attrSpec,"LA");
     let WA=fetchValue(attrSpec,"WA");
     LA=LA-WA;
+    LA=decimal(math.floor(LA));
     changeMaximum(LA,list,"GA",true);
 }
 if(inputInspection(attrSpec,"L") && inputInspection(attrSpec,"LA") && inputInspection(genSpec,"T") && inputInspection(appendSpec,"GB")){
@@ -257,6 +271,7 @@ if(inputInspection(attrSpec,"L") && inputInspection(attrSpec,"LA") && inputInspe
     let T=fetchValue(genSpec,"T");
     let GB=fetchValue(appendSpec,"GB");
     L=L-LA-T-GB;
+    L=decimal(math.floor(L));
     changeMaximum(L,list,"WB",true);
 }
 if(inputInspection(attrSpec,"L") && inputInspection(attrSpec,"LA") && inputInspection(genSpec,"T") && inputInspection(appendSpec,"WB")){
@@ -265,6 +280,7 @@ if(inputInspection(attrSpec,"L") && inputInspection(attrSpec,"LA") && inputInspe
     let T=fetchValue(genSpec,"T");
     let WB=fetchValue(appendSpec,"WB");
     L=L-LA-T-WB;
+    L=decimal(math.floor(L));
     changeMaximum(L,list,"GB",true);
 }
 if(inputInspection(attrSpec,"L") && inputInspection(genSpec,"T")  && inputInspection(attrSpec,"LA")  && inputInspection(appendSpec,"ZB") ){
@@ -273,6 +289,7 @@ if(inputInspection(attrSpec,"L") && inputInspection(genSpec,"T")  && inputInspec
     let LA=fetchValue(attrSpec,"LA");
     let ZB=fetchValue(appendSpec,"ZB");
     L=L-T-LA-ZB-2;
+    L=decimal(math.floor(L));
     changeMaximum(L,list,"HB_2",true);
 }
 if(inputInspection(appendSpec,"KC") && inputInspection(appendSpec,"KB") ){
@@ -315,12 +332,37 @@ if(inputInspection(attrSpec,"L") && inputInspection(appendSpec,"ZC") ){
     let L=fetchValue(attrSpec,"L");
     let ZC=fetchValue(appendSpec,"ZC");
     L=L-ZC-2;
+    L=decimal(math.floor(L));
     changeMaximum(L,list,"HC_2",true);
 }
-if(inputInspection(attrSpec,"LB")){
-    let LB=fetchValue(attrSpec,"LB");
-    LB=LB-3;
-    changeMaximum(LB,list,"TB",true);
+if(inputInspection(attrSpec,"L") && inputInspection(attrSpec,"LA")  && inputInspection(genSpec,"T") ){
+    let L=fetchValue(attrSpec,"L");
+    let LA=fetchValue(attrSpec,"LA");
+    let T=fetchValue(genSpec,"T");
+    L=L-LA-T-3;
+    L=decimal(math.floor(L));
+    changeMaximum(L,list,"TB",true);
+}
+if(inputInspection(attrSpec,"LA") && inputInspection(genSpec,"T") ){
+    let LA=fetchValue(attrSpec,"LA");
+    let T=fetchValue(genSpec,"T");
+    LA=(LA+T)*2;
+    LA=decimal(math.floor(LA));
+    changeMinimum(LA,list,"L",true);
+}
+if(inputInspection(attrSpec,"LA") && inputInspection(genSpec,"T") ){
+    let LA=fetchValue(attrSpec,"LA");
+    let T=fetchValue(genSpec,"T");
+    LA=(LA+T)*2;
+    LA=decimal(math.floor(LA));
+    changeMinimum(LA,list,"L",true);
+}
+if(inputInspection(attrSpec,"L") && inputInspection(genSpec,"T") ){
+    let L=fetchValue(attrSpec,"L");
+    let T=fetchValue(genSpec,"T");
+    L=L/2-T;
+    L=decimal(math.floor(L));
+    changeMaximum(L,list,"LA",true);
 }
 return p;
 ','0',now() ,'1001242计算脚本')
