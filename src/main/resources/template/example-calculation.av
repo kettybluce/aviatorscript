@@ -1,8 +1,49 @@
-##脚本：TB≤L-LA-T-3
-if(inputInspection(attrSpec,"L") && inputInspection(attrSpec,"LA")  && inputInspection(genSpec,"T") ){
+##脚本：LA≤L-LB-LC-0.5
+if(inputInspection(attrSpec,"L") && inputInspection(attrSpec,"LB")  && inputInspection(attrSpec,"LC")  && inputInspection(appendSpec,"0.5") ){
+    let L=fetchValue(attrSpec,"L");
+    let LB=fetchValue(attrSpec,"LB");
+    let LC=fetchValue(attrSpec,"LC");
+    let 0.5=fetchValue(appendSpec,"0.5");
+    L=L-LB-LC-0.5;
+    changeMaximum(L,list,"LA",true);
+}
+##脚本：LB≤L-LA-LC-0.5
+if(inputInspection(attrSpec,"L") && inputInspection(attrSpec,"LA")  && inputInspection(attrSpec,"LC")  && inputInspection(appendSpec,"0.5") ){
     let L=fetchValue(attrSpec,"L");
     let LA=fetchValue(attrSpec,"LA");
-    let T=fetchValue(genSpec,"T");
-    L=L-LA-T-3;
-    changeMaximum(L,list,"TB",true);
+    let LC=fetchValue(attrSpec,"LC");
+    let 0.5=fetchValue(appendSpec,"0.5");
+    L=L-LA-LC-0.5;
+    changeMaximum(L,list,"LB",true);
+}
+##脚本：LC≤L-LA-LB-0.5
+if(inputInspection(attrSpec,"L") && inputInspection(attrSpec,"LA")  && inputInspection(attrSpec,"LB")  && inputInspection(appendSpec,"0.5") ){
+    let L=fetchValue(attrSpec,"L");
+    let LA=fetchValue(attrSpec,"LA");
+    let LB=fetchValue(attrSpec,"LB");
+    let 0.5=fetchValue(appendSpec,"0.5");
+    L=L-LA-LB-0.5;
+    changeMaximum(L,list,"LC",true);
+}
+##脚本：NA<=P-4
+if(inputInspection(appendSpec,"=P") && inputInspection(appendSpec,"4") ){
+    let =P=fetchValue(appendSpec,"=P");
+    let 4=fetchValue(appendSpec,"4");
+    =P==P-4;
+}
+##脚本：NC<=Q-4
+if(inputInspection(appendSpec,"=Q") && inputInspection(appendSpec,"4") ){
+    let =Q=fetchValue(appendSpec,"=Q");
+    let 4=fetchValue(appendSpec,"4");
+    =Q==Q-4;
+}
+##脚本：Q<P-1
+if(inputInspection(genSpec,"P")){
+    let P=fetchValue(genSpec,"P");
+    P=P-1;
+}
+##脚本：P>Q+1
+if(inputInspection(attrSpec,"Q")){
+    let Q=fetchValue(attrSpec,"Q");
+    Q=Q+1;
 }

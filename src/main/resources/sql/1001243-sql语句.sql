@@ -1,5 +1,5 @@
 DELETE FROM `goods_rule` WHERE spu='1001243' AND rule_type='20';
-INSERT INTO goods_rule (rule_id,spu, rule_type, expression,`enable`,create_time,remark) VALUE (1686269364750594048,1001243,'20','let errmsg = nil;
+INSERT INTO goods_rule (rule_id,spu, rule_type, expression,`enable`,create_time,remark) VALUES (1689814972252901376,1001243,'20','let errmsg = nil;
 if((KA!= nil && HA!= nil)||(KA== nil && HA== nil)){
     return true;
 } else {
@@ -7,9 +7,7 @@ if((KA!= nil && HA!= nil)||(KA== nil && HA== nil)){
    return errmsg;
 }
 
-','0',now() ,'脚本：KA,HA');
-
-INSERT INTO goods_rule (rule_id,spu, rule_type, expression,`enable`,create_time,remark) VALUE (1686269364754788352,1001243,'20','let errmsg = nil;
+','0',now() ,'脚本：KA,HA'),(1689814972252901377,1001243,'20','let errmsg = nil;
 if((KB!= nil && HB!= nil)||(KB== nil && HB== nil)){
     return true;
 } else {
@@ -17,9 +15,7 @@ if((KB!= nil && HB!= nil)||(KB== nil && HB== nil)){
    return errmsg;
 }
 
-','0',now() ,'脚本：KB,HB');
-
-INSERT INTO goods_rule (rule_id,spu, rule_type, expression,`enable`,create_time,remark) VALUE (1686269364754788353,1001243,'20','let errmsg = nil;
+','0',now() ,'脚本：KB,HB'),(1689814972252901378,1001243,'20','let errmsg = nil;
 if((KC!= nil && HC!= nil)||(KC== nil && HC== nil)){
     return true;
 } else {
@@ -27,9 +23,7 @@ if((KC!= nil && HC!= nil)||(KC== nil && HC== nil)){
    return errmsg;
 }
 
-','0',now() ,'脚本：KC,HC');
-
-INSERT INTO goods_rule (rule_id,spu, rule_type, expression,`enable`,create_time,remark) VALUE (1686269364754788354,1001243,'20','let errmsg = nil;
+','0',now() ,'脚本：KC,HC'),(1689814972252901379,1001243,'20','let errmsg = nil;
 if((KD!= nil && HD!= nil)||(KD== nil && HD== nil)){
     return true;
 } else {
@@ -37,9 +31,7 @@ if((KD!= nil && HD!= nil)||(KD== nil && HD== nil)){
    return errmsg;
 }
 
-','0',now() ,'脚本：KD,HD');
-
-INSERT INTO goods_rule (rule_id,spu, rule_type, expression,`enable`,create_time,remark) VALUE (1686269364754788355,1001243,'20','let errmsg = nil;
+','0',now() ,'脚本：KD,HD'),(1689814972257095680,1001243,'20','let errmsg = nil;
 if((ZA!= nil && HA_2!= nil && AA!= nil)||(ZA== nil && HA_2== nil && AA== nil)){
     return true;
 } else {
@@ -47,9 +39,7 @@ if((ZA!= nil && HA_2!= nil && AA!= nil)||(ZA== nil && HA_2== nil && AA== nil)){
    return errmsg;
 }
 
-','0',now() ,'脚本：ZA,HA_2,AA');
-
-INSERT INTO goods_rule (rule_id,spu, rule_type, expression,`enable`,create_time,remark) VALUE (1686269364754788356,1001243,'20','let errmsg = nil;
+','0',now() ,'脚本：ZA,HA_2,AA'),(1689814972257095681,1001243,'20','let errmsg = nil;
 if((ZB!= nil && HB_2!= nil && AB!= nil)||(ZB== nil && HB_2== nil && AB== nil)){
     return true;
 } else {
@@ -57,9 +47,7 @@ if((ZB!= nil && HB_2!= nil && AB!= nil)||(ZB== nil && HB_2== nil && AB== nil)){
    return errmsg;
 }
 
-','0',now() ,'脚本：ZB,HB_2,AB');
-
-INSERT INTO goods_rule (rule_id,spu, rule_type, expression,`enable`,create_time,remark) VALUE (1686269364754788357,1001243,'20','let errmsg = nil;
+','0',now() ,'脚本：ZB,HB_2,AB'),(1689814972257095682,1001243,'20','let errmsg = nil;
 if((ZC!= nil && HC_2!= nil && AC!= nil)||(ZC== nil && HC_2== nil && AC== nil)){
     return true;
 } else {
@@ -67,9 +55,7 @@ if((ZC!= nil && HC_2!= nil && AC!= nil)||(ZC== nil && HC_2== nil && AC== nil)){
    return errmsg;
 }
 
-','0',now() ,'脚本：ZC,HC_2,AC');
-
-INSERT INTO goods_rule (rule_id,spu, rule_type, expression,`enable`,create_time,remark) VALUE (1686269364754788358,1001243,'20','let errmsg = nil;
+','0',now() ,'脚本：ZC,HC_2,AC'),(1689814972257095683,1001243,'20','let errmsg = nil;
 if((ZD!= nil && HD_2!= nil && AD!= nil)||(ZD== nil && HD_2== nil && AD== nil)){
     return true;
 } else {
@@ -77,9 +63,7 @@ if((ZD!= nil && HD_2!= nil && AD!= nil)||(ZD== nil && HD_2== nil && AD== nil)){
    return errmsg;
 }
 
-','0',now() ,'脚本：ZD,HD_2,AD');
-
-INSERT INTO goods_rule (rule_id,spu, rule_type, expression,`enable`,create_time,remark) VALUE (1686269364754788359,1001243,'20','let errmsg = nil;
+','0',now() ,'脚本：ZD,HD_2,AD'),(1689814972257095684,1001243,'20','let errmsg = nil;
 if((WA!= nil && GA!= nil && AA_2!= nil)||(WA== nil && GA== nil && AA_2== nil)){
     return true;
 } else {
@@ -87,9 +71,7 @@ if((WA!= nil && GA!= nil && AA_2!= nil)||(WA== nil && GA== nil && AA_2== nil)){
    return errmsg;
 }
 
-','0',now() ,'脚本：WA,GA,AA_2');
-
-INSERT INTO goods_rule (rule_id,spu, rule_type, expression,`enable`,create_time,remark) VALUE (1686269364754788360,1001243,'20','let errmsg = nil;
+','0',now() ,'脚本：WA,GA,AA_2'),(1689814972257095685,1001243,'20','let errmsg = nil;
 if((WC!= nil && GC!= nil && AB_2!= nil)||(WC== nil && GC== nil && AB_2== nil)){
     return true;
 } else {
@@ -97,9 +79,7 @@ if((WC!= nil && GC!= nil && AB_2!= nil)||(WC== nil && GC== nil && AB_2== nil)){
    return errmsg;
 }
 
-','0',now() ,'脚本：WC,GC,AB_2');
-
-INSERT INTO goods_rule (rule_id,spu, rule_type, expression,`enable`,create_time,remark) VALUE (1686269364754788361,1001243,'20','let errmsg = nil;
+','0',now() ,'脚本：WC,GC,AB_2'),(1689814972257095686,1001243,'20','let errmsg = nil;
 if((WD!= nil && GD!= nil && AC_2!= nil)||(WD== nil && GD== nil && AC_2== nil)){
     return true;
 } else {
@@ -107,9 +87,7 @@ if((WD!= nil && GD!= nil && AC_2!= nil)||(WD== nil && GD== nil && AC_2== nil)){
    return errmsg;
 }
 
-','0',now() ,'脚本：WD,GD,AC_2');
-
-INSERT INTO goods_rule (rule_id,spu, rule_type, expression,`enable`,create_time,remark) VALUE (1686269364754788362,1001243,'20','let errmsg = nil;
+','0',now() ,'脚本：WD,GD,AC_2'),(1689814972257095687,1001243,'20','let errmsg = nil;
 if((WE!= nil && GE!= nil && AD_2!= nil)||(WE== nil && GE== nil && AD_2== nil)){
     return true;
 } else {
@@ -118,18 +96,14 @@ if((WE!= nil && GE!= nil && AD_2!= nil)||(WE== nil && GE== nil && AD_2== nil)){
 }
 
 
-','0',now() ,'脚本：WE,GE,AD_2');
-
-INSERT INTO goods_rule (rule_id,spu, rule_type, expression,`enable`,create_time,remark) VALUE (1686269364754788363,1001243,'20','let errmsg = nil;
+','0',now() ,'脚本：WE,GE,AD_2'),(1689814972257095688,1001243,'20','let errmsg = nil;
 if(type==KZDE && (D==35 || D==40 || 50)){
     errmsg = "KZDE类型没有35、40、50";
     return errmsg;
 }
 return true;
 
-','0',now() ,'脚本：（KZDE类型没有35、40、50）');
-
-INSERT INTO goods_rule (rule_id,spu, rule_type, expression,`enable`,create_time,remark) VALUE (1686269364754788364,1001243,'20','let errmsg = nil;
+','0',now() ,'脚本：（KZDE类型没有35、40、50）'),(1689814972257095689,1001243,'20','let errmsg = nil;
 if((D==35 || D==35) && L !=nil){
     if(L<10 && L>125){
         errmsg = "D为30、35时，L的取值范围是10到125才能生成型号";
@@ -139,11 +113,11 @@ if((D==35 || D==35) && L !=nil){
 return true;
 
 
-','0',now() ,'脚本：D为30、35时，L的取值范围是10到125才能生成型号');
-
-INSERT INTO goods_rule (rule_id,spu, rule_type, expression,`enable`,create_time,remark) VALUE (1686269364754788365,1001243,'20','let errmsg = nil;
-if(P !=nil && Q !=nil){
-    if(P<=Q){
+','0',now() ,'脚本：D为30、35时，L的取值范围是10到125才能生成型号'),(1689814972257095690,1001243,'20','let errmsg = nil;
+if(P!=nil && Q!=nil){
+    if(P>Q){
+        return true;
+    }else{
         errmsg = "P>Q才能生成型号";
         return errmsg;
     }
@@ -151,9 +125,7 @@ if(P !=nil && Q !=nil){
 return true;
 
 
-','0',now() ,'脚本：P>Q才能生成型号');
-
-INSERT INTO goods_rule (rule_id,spu, rule_type, expression,`enable`,create_time,remark) VALUE (1686269364754788366,1001243,'20','let errmsg = nil;
+','0',now() ,'脚本：P>Q才能生成型号'),(1689814972257095691,1001243,'20','let errmsg = nil;
 if(L!= nil && LA!= nil && LB!= nil && LC!= nil){
    L=decimal(L);
    LA=decimal(LA);
@@ -169,9 +141,7 @@ if(L!= nil && LA!= nil && LB!= nil && LC!= nil){
 }
 return true;
 
-','0',now() ,'脚本：L>LA+LB+LC');
-
-INSERT INTO goods_rule (rule_id,spu, rule_type, expression,`enable`,create_time,remark) VALUE (1686269364754788367,1001243,'20','let errmsg = nil;
+','0',now() ,'脚本：L>LA+LB+LC'),(1689814972257095692,1001243,'20','let errmsg = nil;
 if(MA!= nil && LA!= nil){
    MA=decimal(MA);
    LA=decimal(LA);
@@ -185,9 +155,7 @@ if(MA!= nil && LA!= nil){
 }
 return true;
 
-','0',now() ,'脚本：5≤MA≤LA-2');
-
-INSERT INTO goods_rule (rule_id,spu, rule_type, expression,`enable`,create_time,remark) VALUE (1686269364754788368,1001243,'20','let errmsg = nil;
+','0',now() ,'脚本：5≤MA≤LA-2'),(1689814972257095693,1001243,'20','let errmsg = nil;
 if(MSA!= nil && LA!= nil){
    MSA=decimal(MSA);
    LA=decimal(LA);
@@ -201,9 +169,7 @@ if(MSA!= nil && LA!= nil){
 }
 return true;
 
-','0',now() ,'脚本：5≤MSA≤LA-2');
-
-INSERT INTO goods_rule (rule_id,spu, rule_type, expression,`enable`,create_time,remark) VALUE (1686269364754788369,1001243,'20','let errmsg = nil;
+','0',now() ,'脚本：5≤MSA≤LA-2'),(1689814972257095694,1001243,'20','let errmsg = nil;
 if(MMA!= nil && LA!= nil){
    MMA=decimal(MMA);
    LA=decimal(LA);
@@ -217,9 +183,7 @@ if(MMA!= nil && LA!= nil){
 }
 return true;
 
-','0',now() ,'脚本：5≤MMA≤LA-2');
-
-INSERT INTO goods_rule (rule_id,spu, rule_type, expression,`enable`,create_time,remark) VALUE (1686269364754788370,1001243,'20','let errmsg = nil;
+','0',now() ,'脚本：5≤MMA≤LA-2'),(1689814972257095695,1001243,'20','let errmsg = nil;
 if(MC!= nil && LC!= nil){
    MC=decimal(MC);
    LC=decimal(LC);
@@ -233,9 +197,7 @@ if(MC!= nil && LC!= nil){
 }
 return true;
 
-','0',now() ,'脚本：5≤MC≤LC-2');
-
-INSERT INTO goods_rule (rule_id,spu, rule_type, expression,`enable`,create_time,remark) VALUE (1686269364758982656,1001243,'20','let errmsg = nil;
+','0',now() ,'脚本：5≤MC≤LC-2'),(1689814972257095696,1001243,'20','let errmsg = nil;
 if(MSC!= nil && LC!= nil){
    MSC=decimal(MSC);
    LC=decimal(LC);
@@ -249,9 +211,7 @@ if(MSC!= nil && LC!= nil){
 }
 return true;
 
-','0',now() ,'脚本：5≤MSC≤LC-2');
-
-INSERT INTO goods_rule (rule_id,spu, rule_type, expression,`enable`,create_time,remark) VALUE (1686269364758982657,1001243,'20','let errmsg = nil;
+','0',now() ,'脚本：5≤MSC≤LC-2'),(1689814972257095697,1001243,'20','let errmsg = nil;
 if(MMC!= nil && LC!= nil){
    MMC=decimal(MMC);
    LC=decimal(LC);
@@ -265,9 +225,7 @@ if(MMC!= nil && LC!= nil){
 }
 return true;
 
-','0',now() ,'脚本：5≤MMC≤LC-2');
-
-INSERT INTO goods_rule (rule_id,spu, rule_type, expression,`enable`,create_time,remark) VALUE (1686269364758982658,1001243,'20','let errmsg = nil;
+','0',now() ,'脚本：5≤MMC≤LC-2'),(1689814972261289984,1001243,'20','let errmsg = nil;
 if(MB!= nil && LB!= nil){
    MB=decimal(MB);
    LB=decimal(LB);
@@ -281,9 +239,7 @@ if(MB!= nil && LB!= nil){
 }
 return true;
 
-','0',now() ,'脚本：5≤MB≤LB-2');
-
-INSERT INTO goods_rule (rule_id,spu, rule_type, expression,`enable`,create_time,remark) VALUE (1686269364758982659,1001243,'20','let errmsg = nil;
+','0',now() ,'脚本：5≤MB≤LB-2'),(1689814972261289985,1001243,'20','let errmsg = nil;
 if(MSB!= nil && LB!= nil){
    MSB=decimal(MSB);
    LB=decimal(LB);
@@ -297,9 +253,7 @@ if(MSB!= nil && LB!= nil){
 }
 return true;
 
-','0',now() ,'脚本：5≤MSB≤LB-2');
-
-INSERT INTO goods_rule (rule_id,spu, rule_type, expression,`enable`,create_time,remark) VALUE (1686269364758982660,1001243,'20','let errmsg = nil;
+','0',now() ,'脚本：5≤MSB≤LB-2'),(1689814972261289986,1001243,'20','let errmsg = nil;
 if(MMB!= nil && LB!= nil){
    MMB=decimal(MMB);
    LB=decimal(LB);
@@ -313,9 +267,7 @@ if(MMB!= nil && LB!= nil){
 }
 return true;
 
-','0',now() ,'脚本：5≤MMB≤LB-2');
-
-INSERT INTO goods_rule (rule_id,spu, rule_type, expression,`enable`,create_time,remark) VALUE (1686269364758982661,1001243,'20','let errmsg = nil;
+','0',now() ,'脚本：5≤MMB≤LB-2'),(1689814972261289987,1001243,'20','let errmsg = nil;
 if(KA!= nil && LA!= nil && HA!= nil){
    KA=decimal(KA);
    LA=decimal(LA);
@@ -330,9 +282,7 @@ if(KA!= nil && LA!= nil && HA!= nil){
 }
 return true;
 
-','0',now() ,'脚本：KA≤LA-HA-2');
-
-INSERT INTO goods_rule (rule_id,spu, rule_type, expression,`enable`,create_time,remark) VALUE (1686269364758982662,1001243,'20','let errmsg = nil;
+','0',now() ,'脚本：KA≤LA-HA-2'),(1689814972261289988,1001243,'20','let errmsg = nil;
 if(HA!= nil && LA!= nil && KA!= nil){
    HA=decimal(HA);
    LA=decimal(LA);
@@ -347,9 +297,7 @@ if(HA!= nil && LA!= nil && KA!= nil){
 }
 return true;
 
-','0',now() ,'脚本：HA≤LA-KA-2');
-
-INSERT INTO goods_rule (rule_id,spu, rule_type, expression,`enable`,create_time,remark) VALUE (1686269364758982663,1001243,'20','let errmsg = nil;
+','0',now() ,'脚本：HA≤LA-KA-2'),(1689814972261289989,1001243,'20','let errmsg = nil;
 if(HA!= nil && LA!= nil){
    HA=decimal(HA);
    LA=decimal(LA);
@@ -363,9 +311,7 @@ if(HA!= nil && LA!= nil){
 }
 return true;
 
-','0',now() ,'脚本：HA≤LA-1');
-
-INSERT INTO goods_rule (rule_id,spu, rule_type, expression,`enable`,create_time,remark) VALUE (1686269364758982664,1001243,'20','let errmsg = nil;
+','0',now() ,'脚本：HA≤LA-1'),(1689814972261289990,1001243,'20','let errmsg = nil;
 if(KB!= nil && L!= nil && LB!= nil && LA!= nil && LC!= nil && HB!= nil){
    KB=decimal(KB);
    L=decimal(L);
@@ -383,9 +329,7 @@ if(KB!= nil && L!= nil && LB!= nil && LA!= nil && LC!= nil && HB!= nil){
 }
 return true;
 
-','0',now() ,'脚本：KB≤L-LB-LA-LC-HB');
-
-INSERT INTO goods_rule (rule_id,spu, rule_type, expression,`enable`,create_time,remark) VALUE (1686269364758982665,1001243,'20','let errmsg = nil;
+','0',now() ,'脚本：KB≤L-LB-LA-LC-HB'),(1689814972261289991,1001243,'20','let errmsg = nil;
 if(KB!= nil && KD!= nil && HB!= nil){
    KB=decimal(KB);
    KD=decimal(KD);
@@ -400,9 +344,7 @@ if(KB!= nil && KD!= nil && HB!= nil){
 }
 return true;
 
-','0',now() ,'脚本：KB≤KD-HB-1');
-
-INSERT INTO goods_rule (rule_id,spu, rule_type, expression,`enable`,create_time,remark) VALUE (1686269364758982666,1001243,'20','let errmsg = nil;
+','0',now() ,'脚本：KB≤KD-HB-1'),(1689814972261289992,1001243,'20','let errmsg = nil;
 if(HB!= nil && L!= nil && LB!= nil && LA!= nil && LC!= nil && KB!= nil){
    HB=decimal(HB);
    L=decimal(L);
@@ -420,9 +362,7 @@ if(HB!= nil && L!= nil && LB!= nil && LA!= nil && LC!= nil && KB!= nil){
 }
 return true;
 
-','0',now() ,'脚本：HB≤L-LB-LA-LC-KB');
-
-INSERT INTO goods_rule (rule_id,spu, rule_type, expression,`enable`,create_time,remark) VALUE (1686269364758982667,1001243,'20','let errmsg = nil;
+','0',now() ,'脚本：HB≤L-LB-LA-LC-KB'),(1689814972261289993,1001243,'20','let errmsg = nil;
 if(KC!= nil && LC!= nil && HC!= nil){
    KC=decimal(KC);
    LC=decimal(LC);
@@ -437,9 +377,7 @@ if(KC!= nil && LC!= nil && HC!= nil){
 }
 return true;
 
-','0',now() ,'脚本：KC≤LC-HC-2');
-
-INSERT INTO goods_rule (rule_id,spu, rule_type, expression,`enable`,create_time,remark) VALUE (1686269364758982668,1001243,'20','let errmsg = nil;
+','0',now() ,'脚本：KC≤LC-HC-2'),(1689814972261289994,1001243,'20','let errmsg = nil;
 if(HC!= nil && LC!= nil && KC!= nil){
    HC=decimal(HC);
    LC=decimal(LC);
@@ -454,9 +392,7 @@ if(HC!= nil && LC!= nil && KC!= nil){
 }
 return true;
 
-','0',now() ,'脚本：HC≤LC-KC-2');
-
-INSERT INTO goods_rule (rule_id,spu, rule_type, expression,`enable`,create_time,remark) VALUE (1686269364758982669,1001243,'20','let errmsg = nil;
+','0',now() ,'脚本：HC≤LC-KC-2'),(1689814972261289995,1001243,'20','let errmsg = nil;
 if(KD!= nil && L!= nil && LA!= nil && LC!= nil && LB!= nil && HD!= nil){
    KD=decimal(KD);
    L=decimal(L);
@@ -474,9 +410,7 @@ if(KD!= nil && L!= nil && LA!= nil && LC!= nil && LB!= nil && HD!= nil){
 }
 return true;
 
-','0',now() ,'脚本：KD≤L-LA-LC-LB-HD-2');
-
-INSERT INTO goods_rule (rule_id,spu, rule_type, expression,`enable`,create_time,remark) VALUE (1686269364758982670,1001243,'20','let errmsg = nil;
+','0',now() ,'脚本：KD≤L-LA-LC-LB-HD-2'),(1689814972261289996,1001243,'20','let errmsg = nil;
 if(KD!= nil && KB!= nil && HB!= nil){
    KD=decimal(KD);
    KB=decimal(KB);
@@ -491,9 +425,7 @@ if(KD!= nil && KB!= nil && HB!= nil){
 }
 return true;
 
-','0',now() ,'脚本：KD≥KB+HB+1');
-
-INSERT INTO goods_rule (rule_id,spu, rule_type, expression,`enable`,create_time,remark) VALUE (1686269364758982671,1001243,'20','let errmsg = nil;
+','0',now() ,'脚本：KD≥KB+HB+1'),(1689814972265484288,1001243,'20','let errmsg = nil;
 if(HD!= nil && L!= nil && LA!= nil && LB!= nil && LC!= nil && KD!= nil){
    HD=decimal(HD);
    L=decimal(L);
@@ -511,9 +443,7 @@ if(HD!= nil && L!= nil && LA!= nil && LB!= nil && LC!= nil && KD!= nil){
 }
 return true;
 
-','0',now() ,'脚本：HD≤L-LA-LB-LC-KD-2');
-
-INSERT INTO goods_rule (rule_id,spu, rule_type, expression,`enable`,create_time,remark) VALUE (1686269364758982672,1001243,'20','let errmsg = nil;
+','0',now() ,'脚本：HD≤L-LA-LB-LC-KD-2'),(1689814972265484289,1001243,'20','let errmsg = nil;
 if(ZA!= nil && LA!= nil && HA_2!=nil){
    ZA=decimal(ZA);
    LA=decimal(LA);
@@ -528,9 +458,7 @@ if(ZA!= nil && LA!= nil && HA_2!=nil){
 }
 return true;
 
-','0',now() ,'脚本：ZA≤LA-HA_2-2');
-
-INSERT INTO goods_rule (rule_id,spu, rule_type, expression,`enable`,create_time,remark) VALUE (1686269364763176960,1001243,'20','let errmsg = nil;
+','0',now() ,'脚本：ZA≤LA-HA_2-2'),(1689814972265484290,1001243,'20','let errmsg = nil;
 if(HA_2!= nil && LA!= nil && ZA!= nil){
    HA_2=decimal(HA_2);
    LA=decimal(LA);
@@ -545,9 +473,7 @@ if(HA_2!= nil && LA!= nil && ZA!= nil){
 }
 return true;
 
-','0',now() ,'脚本：HA_2≤LA-ZA-2');
-
-INSERT INTO goods_rule (rule_id,spu, rule_type, expression,`enable`,create_time,remark) VALUE (1686269364763176961,1001243,'20','let errmsg = nil;
+','0',now() ,'脚本：HA_2≤LA-ZA-2'),(1689814972265484291,1001243,'20','let errmsg = nil;
 if(HA_2!= nil && LA!= nil){
    HA_2=decimal(HA_2);
    LA=decimal(LA);
@@ -561,9 +487,7 @@ if(HA_2!= nil && LA!= nil){
 }
 return true;
 
-','0',now() ,'脚本：HA_2≤LA-1');
-
-INSERT INTO goods_rule (rule_id,spu, rule_type, expression,`enable`,create_time,remark) VALUE (1686269364763176962,1001243,'20','let errmsg = nil;
+','0',now() ,'脚本：HA_2≤LA-1'),(1689814972265484292,1001243,'20','let errmsg = nil;
 if(ZB!= nil && L!= nil && LA!= nil && LB!= nil && LC!= nil && HB_2!= nil){
    ZB=decimal(ZB);
    L=decimal(L);
@@ -581,9 +505,7 @@ if(ZB!= nil && L!= nil && LA!= nil && LB!= nil && LC!= nil && HB_2!= nil){
 }
 return true;
 
-','0',now() ,'脚本：ZB≤L-LA-LB-LC-HB_2');
-
-INSERT INTO goods_rule (rule_id,spu, rule_type, expression,`enable`,create_time,remark) VALUE (1686269364763176963,1001243,'20','let errmsg = nil;
+','0',now() ,'脚本：ZB≤L-LA-LB-LC-HB_2'),(1689814972265484293,1001243,'20','let errmsg = nil;
 if(ZB!= nil && ZD!= nil && HB_2!= nil){
    ZB=decimal(ZB);
    ZD=decimal(ZD);
@@ -598,9 +520,7 @@ if(ZB!= nil && ZD!= nil && HB_2!= nil){
 }
 return true;
 
-','0',now() ,'脚本：ZB≤ZD-HB_2-1');
-
-INSERT INTO goods_rule (rule_id,spu, rule_type, expression,`enable`,create_time,remark) VALUE (1686269364763176964,1001243,'20','let errmsg = nil;
+','0',now() ,'脚本：ZB≤ZD-HB_2-1'),(1689814972265484294,1001243,'20','let errmsg = nil;
 if(HB_2!= nil && L!= nil && LA!= nil && LB!= nil && LC!= nil && KB!= nil){
    HB_2=decimal(HB_2);
    L=decimal(L);
@@ -618,9 +538,7 @@ if(HB_2!= nil && L!= nil && LA!= nil && LB!= nil && LC!= nil && KB!= nil){
 }
 return true;
 
-','0',now() ,'脚本：HB_2≤L-LA-LB-LC-KB');
-
-INSERT INTO goods_rule (rule_id,spu, rule_type, expression,`enable`,create_time,remark) VALUE (1686269364763176965,1001243,'20','let errmsg = nil;
+','0',now() ,'脚本：HB_2≤L-LA-LB-LC-KB'),(1689814972265484295,1001243,'20','let errmsg = nil;
 if(HB_2!= nil && ZD!= nil && KB!= nil){
    HB_2=decimal(HB_2);
    ZD=decimal(ZD);
@@ -635,9 +553,7 @@ if(HB_2!= nil && ZD!= nil && KB!= nil){
 }
 return true;
 
-','0',now() ,'脚本：HB_2≤ZD-KB-1');
-
-INSERT INTO goods_rule (rule_id,spu, rule_type, expression,`enable`,create_time,remark) VALUE (1686269364763176966,1001243,'20','let errmsg = nil;
+','0',now() ,'脚本：HB_2≤ZD-KB-1'),(1689814972265484296,1001243,'20','let errmsg = nil;
 if(ZC!= nil && ZD!= nil && HC_2!=nil){
    ZC=decimal(ZC);
    ZD=decimal(ZD);
@@ -652,9 +568,7 @@ if(ZC!= nil && ZD!= nil && HC_2!=nil){
 }
 return true;
 
-','0',now() ,'脚本：ZC≤ZD-1-HC_2');
-
-INSERT INTO goods_rule (rule_id,spu, rule_type, expression,`enable`,create_time,remark) VALUE (1686269364763176967,1001243,'20','let errmsg = nil;
+','0',now() ,'脚本：ZC≤ZD-1-HC_2'),(1689814972265484297,1001243,'20','let errmsg = nil;
 if(ZD!= nil && ZC!= nil && HC_2!=nil){
    ZC=decimal(ZC);
    ZD=decimal(ZD);
@@ -673,9 +587,7 @@ return true;
 
 
 
-','0',now() ,'脚本：HC_2 ≤ ZD-ZC-1');
-
-INSERT INTO goods_rule (rule_id,spu, rule_type, expression,`enable`,create_time,remark) VALUE (1686269364763176968,1001243,'20','let errmsg = nil;
+','0',now() ,'脚本：HC_2 ≤ ZD-ZC-1'),(1689814972265484298,1001243,'20','let errmsg = nil;
 if(ZD!= nil && L!= nil && LA!= nil && LB!= nil && LC!= nil && HD_2!= nil){
    ZD=decimal(ZD);
    L=decimal(L);
@@ -693,9 +605,7 @@ if(ZD!= nil && L!= nil && LA!= nil && LB!= nil && LC!= nil && HD_2!= nil){
 }
 return true;
 
-','0',now() ,'脚本：ZD≤L-LA-LB-LC-HD_2');
-
-INSERT INTO goods_rule (rule_id,spu, rule_type, expression,`enable`,create_time,remark) VALUE (1686269364763176969,1001243,'20','let errmsg = nil;
+','0',now() ,'脚本：ZD≤L-LA-LB-LC-HD_2'),(1689814972265484299,1001243,'20','let errmsg = nil;
 if(ZD!= nil && ZC!= nil && HC_2!=nil){
    ZD=decimal(ZD);
    ZC=decimal(ZC);
@@ -710,9 +620,7 @@ if(ZD!= nil && ZC!= nil && HC_2!=nil){
 }
 return true;
 
-','0',now() ,'脚本：ZD≥ZC+HC_2+1');
-
-INSERT INTO goods_rule (rule_id,spu, rule_type, expression,`enable`,create_time,remark) VALUE (1686269364763176970,1001243,'20','let errmsg = nil;
+','0',now() ,'脚本：ZD≥ZC+HC_2+1'),(1689814972265484300,1001243,'20','let errmsg = nil;
 if(HD!= nil && L!= nil && LA!= nil && LB!= nil && LC!= nil && ZD!= nil){
    HD=decimal(HD);
    L=decimal(L);
@@ -730,9 +638,7 @@ if(HD!= nil && L!= nil && LA!= nil && LB!= nil && LC!= nil && ZD!= nil){
 }
 return true;
 
-','0',now() ,'脚本：HD≤L-LA-LB-LC-ZD');
-
-INSERT INTO goods_rule (rule_id,spu, rule_type, expression,`enable`,create_time,remark) VALUE (1686269364763176971,1001243,'20','let errmsg = nil;
+','0',now() ,'脚本：HD≤L-LA-LB-LC-ZD'),(1689814972265484301,1001243,'20','let errmsg = nil;
 if(TA!= nil && LA!= nil){
    TA=decimal(TA);
    LA=decimal(LA);
@@ -746,9 +652,7 @@ if(TA!= nil && LA!= nil){
 }
 return true;
 
-','0',now() ,'脚本：TA≤LA-3');
-
-INSERT INTO goods_rule (rule_id,spu, rule_type, expression,`enable`,create_time,remark) VALUE (1686269364763176972,1001243,'20','let errmsg = nil;
+','0',now() ,'脚本：TA≤LA-3'),(1689814972265484302,1001243,'20','let errmsg = nil;
 if(TB!= nil && LB!= nil){
    TB=decimal(TB);
    LB=decimal(LB);
@@ -762,9 +666,7 @@ if(TB!= nil && LB!= nil){
 }
 return true;
 
-','0',now() ,'脚本：TB≤LB-3');
-
-INSERT INTO goods_rule (rule_id,spu, rule_type, expression,`enable`,create_time,remark) VALUE (1686269364763176973,1001243,'20','let errmsg = nil;
+','0',now() ,'脚本：TB≤LB-3'),(1689814972265484303,1001243,'20','let errmsg = nil;
 if(TC!= nil && LC!= nil){
    TC=decimal(TC);
    LC=decimal(LC);
@@ -778,9 +680,7 @@ if(TC!= nil && LC!= nil){
 }
 return true;
 
-','0',now() ,'脚本：TC≤LC-3');
-
-INSERT INTO goods_rule (rule_id,spu, rule_type, expression,`enable`,create_time,remark) VALUE (1686269364763176974,1001243,'20','fn getConstant(D) {
+','0',now() ,'脚本：TC≤LC-3'),(1689814972269678592,1001243,'20','fn getConstant(D) {
   let l=0;
   D=decimal(D);
   if(D==10){
@@ -807,15 +707,13 @@ if(SA!= nil && LA!= nil && D != nil){
    if(SA<=LA){
        return true;
    }else{
-       errmsg = "SA符合逻辑能现实加工出来的取值范围 SA≤LA-l1";
+       errmsg = "SA符合逻辑能现实加工出来的取值范围 SA≤LA-ℓ";
        return errmsg;
    }
 }
 return true;
 
-','0',now() ,'脚本：SA≤LA-l1');
-
-INSERT INTO goods_rule (rule_id,spu, rule_type, expression,`enable`,create_time,remark) VALUE (1686269364763176975,1001243,'20','fn getConstant(D) {
+','0',now() ,'脚本：SA≤LA-l1'),(1689814972269678593,1001243,'20','fn getConstant(D) {
   let l=0;
   D=decimal(D);
   if(D==10){
@@ -845,15 +743,13 @@ if(SD!= nil && L!= nil && LA!= nil && LB!= nil && LC!= nil && D != nil){
    if(SD<=L){
        return true;
    }else{
-       errmsg = "SD符合逻辑能现实加工出来的取值范围 SD≤L-LA-LB-LC-l1";
+       errmsg = "SD符合逻辑能现实加工出来的取值范围 SD≤L-LA-LB-LC-ℓ";
        return errmsg;
    }
 }
 return true;
 
-','0',now() ,'脚本：SD≤L-LA-LB-LC-l1');
-
-INSERT INTO goods_rule (rule_id,spu, rule_type, expression,`enable`,create_time,remark) VALUE (1686269364763176976,1001243,'20','fn getConstant(D) {
+','0',now() ,'脚本：SD≤L-LA-LB-LC-l1'),(1689814972269678594,1001243,'20','fn getConstant(D) {
   let l=0;
   D=decimal(D);
   if(D==10){
@@ -880,15 +776,13 @@ if(SC!= nil && LC!= nil && D != nil){
    if(SC<=LC){
        return true;
    }else{
-       errmsg = "SC符合逻辑能现实加工出来的取值范围 SC≤LC-l1";
+       errmsg = "SC符合逻辑能现实加工出来的取值范围 SC≤LC-ℓ";
        return errmsg;
    }
 }
 return true;
 
-','0',now() ,'脚本：SC≤LC-l1');
-
-INSERT INTO goods_rule (rule_id,spu, rule_type, expression,`enable`,create_time,remark) VALUE (1686269364763176977,1001243,'20','let errmsg = nil;
+','0',now() ,'脚本：SC≤LC-l1'),(1689814972269678595,1001243,'20','let errmsg = nil;
 if(WA!= nil && LA!= nil && GA!= nil){
    WA=decimal(WA);
    LA=decimal(LA);
@@ -903,9 +797,7 @@ if(WA!= nil && LA!= nil && GA!= nil){
 }
 return true;
 
-','0',now() ,'脚本：WA≤LA-GA');
-
-INSERT INTO goods_rule (rule_id,spu, rule_type, expression,`enable`,create_time,remark) VALUE (1686269364763176978,1001243,'20','let errmsg = nil;
+','0',now() ,'脚本：WA≤LA-GA'),(1689814972269678596,1001243,'20','let errmsg = nil;
 if(GA!= nil && LA!= nil && WA!= nil){
    GA=decimal(GA);
    LA=decimal(LA);
@@ -920,9 +812,7 @@ if(GA!= nil && LA!= nil && WA!= nil){
 }
 return true;
 
-','0',now() ,'脚本：GA≤LA-WA');
-
-INSERT INTO goods_rule (rule_id,spu, rule_type, expression,`enable`,create_time,remark) VALUE (1686269364763176979,1001243,'20','let errmsg = nil;
+','0',now() ,'脚本：GA≤LA-WA'),(1689814972269678597,1001243,'20','let errmsg = nil;
 if(WC!= nil && LC!= nil && GC!= nil){
    WC=decimal(WC);
    LC=decimal(LC);
@@ -937,9 +827,7 @@ if(WC!= nil && LC!= nil && GC!= nil){
 }
 return true;
 
-','0',now() ,'脚本：WC≤LC-GC');
-
-INSERT INTO goods_rule (rule_id,spu, rule_type, expression,`enable`,create_time,remark) VALUE (1686269364763176980,1001243,'20','
+','0',now() ,'脚本：WC≤LC-GC'),(1689814972269678598,1001243,'20','
 let errmsg = nil;
 if(GC!= nil && LC!= nil && WC!= nil){
    GC=decimal(GC);
@@ -955,9 +843,7 @@ if(GC!= nil && LC!= nil && WC!= nil){
 }
 return true;
 
-','0',now() ,'脚本：GC≤LC-WC');
-
-INSERT INTO goods_rule (rule_id,spu, rule_type, expression,`enable`,create_time,remark) VALUE (1686269364763176981,1001243,'20','
+','0',now() ,'脚本：GC≤LC-WC'),(1689814972269678599,1001243,'20','
 let errmsg = nil;
 if(WD!= nil && L!= nil && LA!= nil && LB!= nil && LC!= nil && GD!= nil){
    WD=decimal(WD);
@@ -976,9 +862,7 @@ if(WD!= nil && L!= nil && LA!= nil && LB!= nil && LC!= nil && GD!= nil){
 }
 return true;
 
-','0',now() ,'脚本：WD≤L-LA-LB-LC-GD');
-
-INSERT INTO goods_rule (rule_id,spu, rule_type, expression,`enable`,create_time,remark) VALUE (1686269364763176982,1001243,'20','
+','0',now() ,'脚本：WD≤L-LA-LB-LC-GD'),(1689814972269678600,1001243,'20','
 let errmsg = nil;
 if(GD!= nil && L!= nil && LA!= nil && LC!= nil && LB!= nil && WB!= nil){
    GD=decimal(GD);
@@ -997,9 +881,7 @@ if(GD!= nil && L!= nil && LA!= nil && LC!= nil && LB!= nil && WB!= nil){
 }
 return true;
 
-','0',now() ,'脚本：GD≤L-LA-LC-LB-WB');
-
-INSERT INTO goods_rule (rule_id,spu, rule_type, expression,`enable`,create_time,remark) VALUE (1686269364763176983,1001243,'20','
+','0',now() ,'脚本：GD≤L-LA-LC-LB-WB'),(1689814972269678601,1001243,'20','
 let errmsg = nil;
 if(WE!= nil && type!="KZDE"){
     errmsg = "WE只适用于KZDE类型";
@@ -1007,13 +889,92 @@ if(WE!= nil && type!="KZDE"){
 }
 return true;
 
-','0',now() ,'脚本：WE只适用于KZDE类型');
-
-INSERT INTO goods_rule (rule_id,spu, rule_type, expression,`enable`,create_time,remark) VALUE (1686269364767371264,1001243,'20','
+','0',now() ,'脚本：WE只适用于KZDE类型'),(1689814972269678602,1001243,'20','
 let errmsg = nil;
 if(GE!= nil && type!="KZDE"){
     errmsg = "GE只适用于KZDE类型";
     return errmsg;
 }
 return true;
-','0',now() ,'脚本：GE只适用于KZDE类型');
+
+','0',now() ,'脚本：GE只适用于KZDE类型'),(1689814972269678603,1001243,'20','let errmsg = nil;
+if(LA!= nil && L!= nil && LB!= nil && LC!= nil){
+   LA=decimal(LA);
+   L=decimal(L);
+   LB=decimal(LB);
+   LC=decimal(LC);
+
+   let L=L-LB-LC-0.5;
+   if(LA<=L){
+       return true;
+   }else{
+       errmsg = "需满足公式 LA≤L-LB-LC-0.5";
+       return errmsg;
+   }
+}
+return true;
+
+','0',now() ,'脚本：LA≤L-LB-LC-0.5'),(1689814972269678604,1001243,'20','let errmsg = nil;
+if(LB!= nil && L!= nil && LA!= nil && LC!= nil){
+   LB=decimal(LB);
+   L=decimal(L);
+   LA=decimal(LA);
+   LC=decimal(LC);
+
+   let L=L-LA-LC-0.5;
+   if(LB<=L){
+       return true;
+   }else{
+       errmsg = "需满足公式 LB≤L-LA-LC-0.5";
+       return errmsg;
+   }
+}
+return true;
+
+','0',now() ,'脚本：LB≤L-LA-LC-0.5'),(1689814972269678605,1001243,'20','let errmsg = nil;
+if(LC!= nil && L!= nil && LA!= nil && LB!= nil){
+   LC=decimal(LC);
+   L=decimal(L);
+   LA=decimal(LA);
+   LB=decimal(LB);
+
+   let L=L-LA-LB-0.5;
+   if(LC<=L){
+       return true;
+   }else{
+       errmsg = "需满足公式 LC≤L-LA-LB-0.5";
+       return errmsg;
+   }
+}
+return true;
+
+','0',now() ,'脚本：LC≤L-LA-LB-0.5'),(1689814972269678606,1001243,'20','let errmsg = nil;
+if(NA!= nil && P!= nil){
+   NA=decimal(NA);
+   P=decimal(P);
+
+   let P=P-4;
+   if(NA<=P){
+       return true;
+   }else{
+       errmsg = "需满足公式 NA<=P-4";
+       return errmsg;
+   }
+}
+return true;
+
+','0',now() ,'脚本：NA<=P-4'),(1689814972269678607,1001243,'20','let errmsg = nil;
+if(NC!= nil && Q!= nil){
+   NC=decimal(NC);
+   Q=decimal(Q);
+
+   let Q=Q-4;
+   if(NC<=Q){
+       return true;
+   }else{
+       errmsg = "需满足公式 NC<=Q-4";
+       return errmsg;
+   }
+}
+return true;
+','0',now() ,'脚本：NC<=Q-4')

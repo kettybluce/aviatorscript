@@ -1,1 +1,1 @@
-let errmsg = nil;if(MMD!= nil && type =="KZCE"){    errmsg = "[参数指定错误] 参数不能为MMD"+MMD;    return errmsg;}return true;
+let errmsg = nil;if(string.endsWith(type,"2H")){    println(AA);}return true;

@@ -1,17 +1,9 @@
-##脚本：TB≤L-LA-T-3
+##脚本：M,L
 let errmsg = nil;
-if(TB!= nil && L!= nil && LA!= nil && T!= nil){
-   TB=decimal(TB);
-   L=decimal(L);
-   LA=decimal(LA);
-   T=decimal(T);
-   let L=L-LA-T-3;
-   if(TB<=L){
-       return true;
-   }else{
-       errmsg = "需满足公式 TB≤L-LA-T-3";
-       return errmsg;
-   }
+if((M!= nil && L!= nil)||(M== nil && L== nil)){
+    return true;
+} else {
+   errmsg = "型号中需指定下述参数。(M L)";
+   return errmsg;
 }
-return true;
 

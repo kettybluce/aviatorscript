@@ -1,5 +1,5 @@
 DELETE FROM `goods_rule` WHERE spu='1001243' AND rule_type='10';
-INSERT INTO goods_rule (rule_id,spu, rule_type, expression,`enable`,create_time,remark) VALUES (1686198003667628032,1001243,'10','let p = productSearchSkuInfo;
+INSERT INTO goods_rule (rule_id,spu, rule_type, expression,`enable`,create_time,remark) VALUES (1689814550972743680,1001243,'10','let p = productSearchSkuInfo;
 let list=p.specList;
 let D=specType;
 let scMax = nil;
@@ -127,30 +127,33 @@ fn getConstant(D) {
   }
   return l;
 }
-if(inputInspection(attrSpec,"LA") && inputInspection(attrSpec,"LB") && inputInspection(attrSpec,"LC")){
+if(inputInspection(attrSpec,"LA") && inputInspection(attrSpec,"LB")  && inputInspection(attrSpec,"LC") ){
     let LA=fetchValue(attrSpec,"LA");
     let LB=fetchValue(attrSpec,"LB");
     let LC=fetchValue(attrSpec,"LC");
-    LA=LA+LB+LC;
-    changeMaximum(LA,list,"L",true);
+    LA=LA+LB+LC+0.5M;
+    changeMinimum(LA,list,"L",true);
 }
 if(inputInspection(attrSpec,"LA")){
     let LA=fetchValue(attrSpec,"LA");
     LA=LA-2;
+    LA=decimal(math.floor(LA));
     changeMaximum(LA,list,"MA",true);
     changeMaximum(LA,list,"MSA",true);
     changeMaximum(LA,list,"MMA",true);
 }
 if(inputInspection(attrSpec,"LC")){
-    let LA=fetchValue(attrSpec,"LC");
+    let LC=fetchValue(attrSpec,"LC");
     LC=LC-2;
+    LC=decimal(math.floor(LC));
     changeMaximum(LC,list,"MC",true);
     changeMaximum(LC,list,"MSC",true);
     changeMaximum(LC,list,"MMC",true);
 }
 if(inputInspection(attrSpec,"LB")){
-    let LA=fetchValue(attrSpec,"LB");
+    let LB=fetchValue(attrSpec,"LB");
     LB=LB-2;
+    LB=decimal(math.floor(LB));
     changeMaximum(LB,list,"MB",true);
     changeMaximum(LB,list,"MSB",true);
     changeMaximum(LB,list,"MMB",true);
@@ -179,7 +182,6 @@ if(inputInspection(attrSpec,"L") && inputInspection(attrSpec,"LB")  && inputInsp
     let LC=fetchValue(attrSpec,"LC");
     let HB=fetchValue(appendSpec,"HB");
     L=L-LB-LA-LC-HB;
-    changeMinimum
     changeMaximum(L,list,"KB",true);
 }
 if(inputInspection(appendSpec,"KD") && inputInspection(appendSpec,"HB") ){
@@ -259,12 +261,6 @@ if(inputInspection(attrSpec,"L") && inputInspection(attrSpec,"LA")  && inputInsp
     L=L-LA-LB-LC-HB_2;
     changeMaximum(L,list,"ZB",true);
 }
-if(inputInspection(appendSpec,"ZD")  &&  && inputInspection(attrSpec,"HB_2") ){
-    let ZD=fetchValue(appendSpec,"ZD");
-    let HB_2=fetchValue(appendSpec,"HB_2");
-    ZD=ZD-HB_2-1;
-    changeMaximum(ZD,list,"ZB",true);
-}
 if(inputInspection(attrSpec,"L") && inputInspection(attrSpec,"LA")  && inputInspection(attrSpec,"LB")  && inputInspection(attrSpec,"LC")  && inputInspection(appendSpec,"KB") ){
     let L=fetchValue(attrSpec,"L");
     let LA=fetchValue(attrSpec,"LA");
@@ -274,23 +270,29 @@ if(inputInspection(attrSpec,"L") && inputInspection(attrSpec,"LA")  && inputInsp
     L=L-LA-LB-LC-KB;
     changeMaximum(L,list,"HB_2",true);
 }
-if(inputInspection(appendSpec,"ZD")  &&  && inputInspection(attrSpec,"KB") ){
+if(inputInspection(appendSpec,"ZD")  &&  inputInspection(attrSpec,"HB_2") ){
+    let ZD=fetchValue(appendSpec,"ZD");
+    let HB_2=fetchValue(appendSpec,"HB_2");
+    let newZD=ZD-HB_2-1;
+    changeMaximum(newZD,list,"ZB",true);
+}
+if(inputInspection(appendSpec,"ZD")  && inputInspection(attrSpec,"KB") ){
     let ZD=fetchValue(appendSpec,"ZD");
     let KB=fetchValue(appendSpec,"KB");
-    ZD=ZD-KB-1;
-    changeMaximum(ZD,list,"HB_2",true);
+    let newZD=ZD-KB-1;
+    changeMaximum(newZD,list,"HB_2",true);
 }
 if(inputInspection(appendSpec,"ZD")  && inputInspection(appendSpec,"HC_2") )  {
     let ZD=fetchValue(appendSpec,"ZD");
     let HC_2=fetchValue(appendSpec,"HC_2");
-    ZD=ZD-1-HC_2;
-    changeMaximum(ZD,list,"ZC",true);
+    let newZD=ZD-HC_2-1;
+    changeMaximum(newZD,list,"ZC",true);
 }
 if(inputInspection(appendSpec,"ZD") && inputInspection(appendSpec,"ZC") ){
     let ZD=fetchValue(appendSpec,"ZD");
     let ZC=fetchValue(appendSpec,"ZC");
-    ZD=ZD-ZC-1;
-    changeMaximum(ZD,list,"HC_2",true);
+    let newZD=ZD-ZC-1;
+    changeMaximum(newZD,list,"HC_2",true);
 }
 if(inputInspection(attrSpec,"L") && inputInspection(attrSpec,"LA")  && inputInspection(attrSpec,"LB")  && inputInspection(attrSpec,"LC") && inputInspection(appendSpec,"HD_2")){
     let L=fetchValue(attrSpec,"L");
@@ -313,7 +315,7 @@ if(inputInspection(attrSpec,"L") && inputInspection(attrSpec,"LA")  && inputInsp
     let LA=fetchValue(attrSpec,"LA");
     let LC=fetchValue(attrSpec,"LC");
     let LB=fetchValue(attrSpec,"LB");
-    let LA=fetchValue(appendSpec,"ZD");
+    let ZD=fetchValue(appendSpec,"ZD");
     L=L-LA-LB-LC-ZD;
     changeMaximum(L,list,"HD",true);
 }
@@ -400,14 +402,43 @@ if(inputInspection(genSpec,"P")){
     P=P-4;
     P = P < 3M ? 3M : P;
     removeValue(P,list,"NA",true);
-    removeValue(P,list,"NC",true);
 }
 if(inputInspection(attrSpec,"Q")){
     let Q=fetchValue(attrSpec,"Q");
     Q=Q-4;
     Q = Q < 3M ? 3M : Q;
-    removeValue(Q,list,"NA",true);
     removeValue(Q,list,"NC",true);
+}
+if(inputInspection(attrSpec,"L") && inputInspection(attrSpec,"LB")  && inputInspection(attrSpec,"LC")){
+    let L=fetchValue(attrSpec,"L");
+    let LB=fetchValue(attrSpec,"LB");
+    let LC=fetchValue(attrSpec,"LC");
+    L=L-LB-LC-0.5M;
+    changeMaximum(L,list,"LA",true);
+}
+if(inputInspection(attrSpec,"L") && inputInspection(attrSpec,"LA")  && inputInspection(attrSpec,"LC")){
+    let L=fetchValue(attrSpec,"L");
+    let LA=fetchValue(attrSpec,"LA");
+    let LC=fetchValue(attrSpec,"LC");
+    L=L-LA-LC-0.5M;
+    changeMaximum(L,list,"LB",true);
+}
+if(inputInspection(attrSpec,"L") && inputInspection(attrSpec,"LA")  && inputInspection(attrSpec,"LB") ){
+    let L=fetchValue(attrSpec,"L");
+    let LA=fetchValue(attrSpec,"LA");
+    let LB=fetchValue(attrSpec,"LB");
+    L=L-LA-LB-0.5M;
+    changeMaximum(L,list,"LC",true);
+}
+if(inputInspection(genSpec,"P")){
+    let P=fetchValue(genSpec,"P");
+    P=P-1;
+    changeMaximum(P,list,"Q",true);
+}
+if(inputInspection(attrSpec,"Q")){
+    let Q=fetchValue(attrSpec,"Q");
+    Q=Q+1;
+    changeMinimum(Q,list,"P",true);
 }
 return p;
 ','0',now() ,'1001243计算脚本')
