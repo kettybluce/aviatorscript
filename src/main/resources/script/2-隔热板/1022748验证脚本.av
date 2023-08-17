@@ -1,0 +1,23 @@
+##脚本：A≥B
+let errmsg = nil;
+if(A != nil && B != nil){
+    A=decimal(A);
+    B=decimal(B);
+    if(A<B){
+      errmsg = "需满足公式 A≥B";
+      return errmsg;
+   }
+}
+return true;
+
+##脚本：B≤A
+let errmsg = nil;
+if(A != nil && B != nil){
+    A=decimal(A);
+    B=decimal(B);
+    if(B>A){
+      errmsg = "需满足公式 B≤A";
+      return errmsg;
+   }
+}
+return true;

@@ -1,0 +1,107 @@
+let p = productSearchSkuInfo;
+
+let list=p.specList;
+
+let D=specType;
+
+let scMax = nil;
+
+let lMin = nil;
+
+let newL=nil;
+
+
+## 输入型遍历检查-判断是否存在
+fn  inputInspection (attrSpec,value){
+     for m in attrSpec {
+        if(m.enSpecName==value){
+            return true;
+        }
+     }
+    return false;
+}
+
+## 根据情况改变最大值
+fn  changeMaximum(scMax,list,value,flag){
+    if(scMax==nil){
+        return false;
+    }
+    if(type(scMax)=="long" || type(scMax)=="string"){
+        scMax=decimal(scMax);
+    }
+    for m in list {
+        for n in m.specRangeList {
+            if(m.enSpecName == value){
+                ## 标品计算
+                if(flag){
+                    if(scMax <= n.maxValue && scMax >= n.minValue){
+                        n.maxValue = scMax;
+                    }
+                ## 非标品计算
+                }else{
+                    if(scMax <= n.maxValue && scMax >= n.minValue){
+                        n.maxValue = scMax;
+                ## 最大范围超限制
+                    }elsif(scMax < n.minValue){
+                        n.maxValue = 0M;
+                    }
+                }
+            }
+        }
+    }
+}
+
+## 改变属性的最小值
+fn  changeMinimum(lMin,list,value,flag){
+    if(lMin==nil || lMin < 0){
+        return false;
+    }
+    if(type(lMin)=="long" || type(lMin)=="string"){
+        lMin=decimal(lMin);
+    }
+    for m in list {
+        for n in m.specRangeList {
+            if(m.enSpecName == value){
+                if(flag){
+                    if(lMin >= n.minValue && lMin <= n.maxValue){
+                        n.minValue = lMin;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
+
+## 遍历获取对应的值
+fn  fetchValue(newObject,value){
+    let newValue=0M;
+    if(newObject==nil){
+        return newValue;
+    }
+    for m in newObject {
+        if(m.enSpecName==value){
+            newValue= decimal(m.attrSpecValue);
+        }
+     }
+    return newValue;
+}
+
+## 脚本：B>= A 
+
+if(inputInspection(attrSpec,"B")){
+    let B=fetchValue(attrSpec,"B");
+    changeMinimum(B,list,"A",true);
+}
+
+## 脚本：B <= A 
+
+if(inputInspection(attrSpec,"A")){
+    let A=fetchValue(attrSpec,"A");
+    changeMaximum(A,list,"B",true);
+}
+
+
+return p;

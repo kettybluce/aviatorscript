@@ -1,0 +1,364 @@
+let p = productSearchSkuInfo;
+
+let list=p.specList;
+
+let D=specType;
+
+let scMax = nil;
+
+let lMin = nil;
+
+let newL=nil;
+
+
+## 输入型遍历检查-判断是否存在
+fn  inputInspection (attrSpec,value){
+     for m in attrSpec {
+        if(m.enSpecName==value){
+            return true;
+        }
+     }
+    return false;
+}
+
+## 根据情况改变最大值
+fn  changeMaximum(scMax,list,value,flag){
+    if(scMax==nil){
+        return false;
+    }
+    if(type(scMax)=="long" || type(scMax)=="string"){
+        scMax=decimal(scMax);
+    }
+    for m in list {
+        for n in m.specRangeList {
+            if(m.enSpecName == value){
+                ## 标品计算
+                if(flag){
+                    if(scMax <= n.maxValue && scMax >= n.minValue){
+                        n.maxValue = scMax;
+                    }
+                ## 非标品计算
+                }else{
+                    if(scMax <= n.maxValue && scMax >= n.minValue){
+                        n.maxValue = scMax;
+                ## 最大范围超限制
+                    }elsif(scMax < n.minValue){
+                        n.maxValue = 0M;
+                    }
+                }
+            }
+        }
+    }
+}
+
+## 改变属性的最小值
+fn  changeMinimum(lMin,list,value,flag){
+    if(lMin==nil || lMin < 0){
+        return false;
+    }
+    if(type(lMin)=="long" || type(lMin)=="string"){
+        lMin=decimal(lMin);
+    }
+    for m in list {
+        for n in m.specRangeList {
+            if(m.enSpecName == value){
+                if(flag){
+                    if(lMin >= n.minValue && lMin <= n.maxValue){
+                        n.minValue = lMin;
+                    }
+                }
+            }
+        }
+    }
+}
+
+## 特殊最大值负值处理
+
+fn  changeParticular(scMax,list,value){
+    if(scMax==nil){
+        return false;
+    }
+    if(type(scMax)=="long" || type(scMax)=="string"){
+        scMax=decimal(scMax);
+    }
+    for m in list {
+        for n in m.specRangeList {
+            if(m.enSpecName == value){
+                n.maxValue = scMax;
+            }
+        }
+    }
+}
+
+
+
+## 删除点选的值的范围
+fn removeValue(saveValue,list,value,flag){
+    ## 筛选对应的需要消除的点选集合
+    let new_delete_list=seq.list();
+    for m in list {
+        ## 遍历属性集合
+        if(m.enSpecName==value){
+            for x in m.specValueList{
+                if (x.specValue==nil){
+                    return false;
+                }
+                ## 删大于
+                let compareValue= decimal(x.specValue);
+                if(flag){
+                    if(compareValue > saveValue){
+                        seq.add(new_delete_list,x);
+                    }
+                ## 删小于
+                }else{
+                    if(compareValue < saveValue){
+                        seq.add(new_delete_list,x);
+                    }
+                }
+            }
+            ## 遍历可删除集合，从该属性的点选集合中删除该元素
+            for q in new_delete_list{
+                seq.remove(m.specValueList, q);
+            }
+        }
+    }
+}
+
+## 遍历获取对应的值
+fn  fetchValue(newObject,value){
+    let newValue=0M;
+    if(newObject==nil){
+        return newValue;
+    }
+    for m in newObject {
+        if(m.enSpecName==value){
+            newValue= decimal(m.attrSpecValue);
+        }
+     }
+    return newValue;
+}
+
+
+## 获取螺栓公称直径的值
+let d=nil;
+if(inputInspection(genSpec,"Z")){
+   let Z=fetchValue(genSpec,"Z");
+   if(Z==3){
+    d=3.5M;
+   }elsif(Z==4){
+    d=4.5M;
+   }elsif(Z==5){
+    d=5.5M;
+   }elsif(Z==6){
+    d=6.5M;
+   }elsif(Z==8){
+    d=9M;
+   }elsif(Z==10){
+    d=11M;
+   }
+}
+
+let d1=nil;
+if(inputInspection(genSpec,"N")){
+   let N=fetchValue(genSpec,"N");
+   if(N==4){
+    d1=8M;
+   }elsif(N==5){
+    d1=9.5M;
+   }elsif(N==6){
+    d1=11M;
+   }elsif(N==8){
+    d1=14M;
+   }
+}
+
+
+
+
+## 脚本：B>= A
+
+if(inputInspection(attrSpec,"B")){
+    let B=fetchValue(attrSpec,"B");
+    changeMinimum(B,list,"A",true);
+}
+
+## 脚本：B <= A
+
+if(inputInspection(attrSpec,"A")){
+    let A=fetchValue(attrSpec,"A");
+    changeMaximum(A,list,"B",true);
+}
+
+
+
+
+
+## 脚本：A ≤ F+d1
+if(inputInspection(attrSpec,"F") && d1!=nil){
+    let F=fetchValue(attrSpec,"F");
+
+    F=F+d1;
+    F=decimal(math.ceil(F));
+    changeMaximum(F,list,"A",true);
+}
+
+
+## 脚本：A ≤ F+d
+if(inputInspection(attrSpec,"F") && d!=nil){
+    let F=fetchValue(attrSpec,"F");
+
+    F=F+d;
+    F=decimal(math.ceil(F));
+    changeMaximum(F,list,"A",true);
+}
+
+
+## 脚本：选择2H型时，G+d/2+2.5≤B
+if(string.endsWith(type,"2H") && d!=nil && inputInspection(attrSpec,"G")){
+    let G=fetchValue(attrSpec,"G");
+    G=G+d/2+2.5M;
+    G=decimal(math.ceil(G));
+    changeMinimum(G,list,"B",true);
+}
+
+
+
+## 脚本：选择2H型时，G+d1/2+2.5≤B
+if(string.endsWith(type,"2H") && d1!=nil && inputInspection(attrSpec,"G")){
+    let G=fetchValue(attrSpec,"G");
+    G=G+d1/2+2.5M;
+
+    G=decimal(math.ceil(G));
+
+    changeMaximum(G,list,"B",true);
+}
+
+
+
+## 脚本：选择4H型时，G+d1+5≤B
+if(string.endsWith(type,"4H") && d1!=nil && inputInspection(attrSpec,"G")){
+    let G=fetchValue(attrSpec,"G");
+    G=G+d1+5M;
+
+    G=decimal(math.ceil(G));
+
+    changeMaximum(G,list,"B",true);
+
+}
+
+
+## 脚本：选择4H型时，G+d+5≤B
+if(string.endsWith(type,"4H") && d!=nil && inputInspection(attrSpec,"G")){
+    let G=fetchValue(attrSpec,"G");
+    G=G+d+5M;
+
+    G=decimal(math.ceil(G));
+
+    changeMaximum(G,list,"B",true);
+}
+
+
+
+## 脚本：d+5≤F
+if(d!=nil){
+    let newd=d+5;
+    changeMinimum(newd,list,"F",true);
+}
+
+## 脚本：F≤A-d-5
+if(d!=nil && inputInspection(attrSpec,"A")){
+    let A=fetchValue(attrSpec,"A");
+
+    A=A-d-5M;
+    changeMaximum(A,list,"F",true);
+}
+
+## 脚本：d1+5≤F
+if(d1!=nil){
+    let newd=d1+5M;
+    changeMinimum(newd,list,"F",true);
+}
+
+## 脚本：F≤A-d1-5
+if(d1!=nil && inputInspection(attrSpec,"A")){
+    let A=fetchValue(attrSpec,"A");
+
+    A=A-d1-5M;
+    changeMaximum(A,list,"F",true);
+}
+
+## 脚本：选择2H型时 d/2+2.5≤G 最小值计算结果：小数部分小于0.5时，保留0.5；大于0.5时，向上取整
+if(d!=nil && string.endsWith(type,"2H")){
+      let newD=d/2+2.5M;
+
+      let comparison=decimal(math.floor(newD)+0.5);
+      newD = comparison > newD ? decimal(math.ceil(newD)) : comparison;
+
+      changeMinimum(newD,list,"G",true);
+}
+
+## 脚本：选择2H型时 G≤B-d/2-2.5 最大值计算结果：小数部分大于0.5时，保留0.5；小于0.5时，向下取整
+if(d!=nil && string.endsWith(type,"2H") && inputInspection(attrSpec,"B")){
+
+      let B=fetchValue(attrSpec,"B");
+      B=B-d/2-2.5M;
+
+      let comparison=decimal(math.floor(B)+0.5);
+      B = comparison > B ? decimal(math.floor(B)) : comparison;
+
+      changeMaximum(B,list,"G",true);
+}
+
+
+## 脚本：选择2H型时 d1/2+2.5≤G 最小值计算结果：小数部分小于0.5时，保留0.5；大于0.5时，向上取整
+if(d1!=nil && string.endsWith(type,"2H")){
+      let newD=d1/2+2.5M;
+
+      let comparison=decimal(math.floor(newD)+0.5);
+      newD = comparison > newD ? decimal(math.ceil(newD)) : comparison;
+
+      changeMinimum(newD,list,"G",true);
+}
+
+
+## 脚本：选择2H型时 G≤B-d1/2-2.5 最大值计算结果：小数部分大于0.5时，保留0.5；小于0.5时，向下取整
+if(d1!=nil && string.endsWith(type,"2H") && inputInspection(attrSpec,"B")){
+      let B=fetchValue(attrSpec,"B");
+      B=B-d1/2-2.5M;
+
+      let comparison=decimal(math.floor(B)+0.5);
+      B = comparison > B ? decimal(math.floor(B)) : comparison;
+
+      changeMaximum(B,list,"G",true);
+}
+
+
+## 脚本：选择4H型时 d+5≤G
+if(d!=nil && string.endsWith(type,"4H")){
+      let newD=d+5M;
+      changeMinimum(newD,list,"G",true);
+}
+
+
+## 脚本：选择4H型时 G≤B-d-5
+if(d!=nil && string.endsWith(type,"4H") && inputInspection(attrSpec,"B")){
+      let B=fetchValue(attrSpec,"B");
+      B=B-d-5M;
+      changeMaximum(B,list,"G",true);
+}
+
+## 脚本：选择4H型时 d1+5≤G
+if(d1!=nil && string.endsWith(type,"4H")){
+      let newD=d1+5M;
+      changeMinimum(newD,list,"G",true);
+}
+
+
+## 脚本：选择4H型时 G≤B-d1-5
+if(d1!=nil && string.endsWith(type,"4H") && inputInspection(attrSpec,"B")){
+      let B=fetchValue(attrSpec,"B");
+      B=B-d1-5M;
+      changeMaximum(B,list,"G",true);
+}
+
+return p;
